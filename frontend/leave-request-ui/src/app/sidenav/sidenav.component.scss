@@ -1,0 +1,41 @@
+.sidenav-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+mat-sidenav {
+  width: 250px;
+  background-color: #a8a8a8; /* Dark blue background */
+  color: white;
+}
+
+mat-sidenav mat-toolbar {
+  background-color: #bbbbbb; /* Darker blue background for toolbar */
+}
+
+.mat-nav-list a {
+  color: white;
+}
+
+.mat-nav-list a.active {
+  background-color: #1a237e; /* Dark blue background for active link */
+}
+
+.mat-nav-list a:hover {
+  background-color: #34495e; /* Lighter blue background on hover */
+}
+
+.mat-sidenav-content {
+  background-color: #ecf0f1; /* Light gray background for content */
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.content {
+  padding: 20px;
+  background-color: #ffffff; /* White background for content area */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  flex-grow: 1;
+}

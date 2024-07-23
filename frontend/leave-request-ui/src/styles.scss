@@ -1,19 +1,16 @@
-body, html {
+/* Ensure the html and body elements take up the full height and width */
+html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
-    height: 100%;
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .app-root {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
     width: 100%;
   }
   
+  /* Make sure the app-root element also takes up the full height and width */
+  .app-root {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
   

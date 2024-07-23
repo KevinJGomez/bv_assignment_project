@@ -1,17 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { SignUpComponent } from './signup.component';
 
-describe('SignupComponent', () => {
-  let component: SignUpComponent;
-  let fixture: ComponentFixture<SignUpComponent>;
+import { RequestLeaveComponent } from './request-leave.component';
+
+describe('RequestLeaveComponent', () => {
+  let component: RequestLeaveComponent;
+  let fixture: ComponentFixture<RequestLeaveComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SignUpComponent]
+      imports: [RequestLeaveComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(SignUpComponent);
+    fixture = TestBed.createComponent(RequestLeaveComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,3 +1,12 @@
+/* Parent container to center the login container */
+.parent-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full height of the viewport */
+  background: #f0f0f0; /* Light background color for the full screen */
+}
+
 .login-container {
   width: 90%;
   max-width: 400px;
@@ -29,7 +38,6 @@
   align-items: center;
   justify-content: center;
 }
-
 
 .login-title {
   font-size: 24px;
