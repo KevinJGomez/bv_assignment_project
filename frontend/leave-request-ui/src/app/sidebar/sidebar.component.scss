@@ -1,0 +1,45 @@
+.sidebar {
+  width: 250px;
+  background: linear-gradient(to bottom, #00c6ff, #0072ff); /* Light blue gradient */
+  color: white;
+  position: fixed;
+  height: 100%;
+  transition: all 0.3s;
+}
+
+.sidebar.toggled {
+  width: 0;
+  overflow: hidden;
+}
+
+.toggle-button {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1001;
+}
+
+.main-content {
+  transition: margin-left 0.3s;
+  margin-left: 250px;
+}
+
+.main-content.full-width {
+  margin-left: 0;
+}
+
+.custom-hr {
+  border: 0.5px solid #b6d8ff; /* Darker gray color */
+  opacity: 2; /* Ensures full color intensity */
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 0;
+    overflow: hidden;
+  }
+  
+  .main-content {
+    margin-left: 0;
+  }
+}

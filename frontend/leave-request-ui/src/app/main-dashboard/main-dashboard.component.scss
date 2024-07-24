@@ -1,0 +1,23 @@
+.main-content {
+    background: rgb(255, 255, 255);
+    transition: margin-left 0.3s;
+    margin-left: 250px;
+    width: calc(100% - 250px);
+  }
+  
+  .main-content.full-width {
+    margin-left: 0;
+    width: 100%;
+  }
+  
+  @media (max-width: 768px) {
+    .main-content {
+      margin-left: 0;
+      width: 100%;
+    }
+  
+    .toggle-button {
+      left: 10px;
+    }
+  }
+  

@@ -1,0 +1,48 @@
+body {
+    background-color: #2e3440;
+    color: #d8dee9;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar {
+    background-color: #3b4252;
+  }
+  
+  .bg-primary {
+    background-color: #4c566a !important;
+  }
+  
+  .text-white {
+    color: #d8dee9 !important;
+  }
+  
+  .card {
+    background-color: #eceff4;
+    border: none;
+  }
+  
+  @media (max-width: 768px) {
+    .sidebar {
+      position: fixed;
+      width: 100%;
+      height: auto;
+      z-index: 1000;
+    }
+  
+    .main-content {
+      margin-top: 150px; /* Adjust based on sidebar height */
+    }
+  }
+  
+  @media (min-width: 769px) {
+    .sidebar {
+      height: 100vh;
+      position: fixed;
+    }
+  
+    .main-content {
+      margin-left: 16.6667%; /* Equal to col-2 width */
+    }
+  }
+  

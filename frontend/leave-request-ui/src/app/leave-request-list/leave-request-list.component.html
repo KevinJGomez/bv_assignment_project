@@ -1,0 +1,32 @@
+<div class="container-fluid mt-2">
+  <div class="row">
+    <div class="col-12">
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">Leave Requests</h5>
+          <div *ngFor="let request of leaveRequests" class="leave-request-item" (click)="viewRequest(request)">
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <strong>{{ request.leaveType }}</strong>
+                <p class="mb-1">From: {{ request.startDate | date: 'longDate' }}</p>
+                <p class="mb-1">To: {{ request.endDate | date: 'longDate' }}</p>
+                <p class="mb-0">Reason: {{ request.reason }}</p>
+              </div>
+              <div class="arrow-icon">
+                &#8250;
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <app-leave-request-modal
+    [show]="showModal"
+    [leaveRequest]="selectedRequest"
+    (update)="updateRequest($event)"
+    (delete)="deleteRequest($event)"
+    (close)="showModal = false">
+  </app-leave-request-modal>
+</div>
