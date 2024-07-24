@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectorRef  } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LeaveRequestModalComponent } from '../leave-request-modal/leave-request-modal.component';
 
@@ -26,8 +26,14 @@ export class LeaveRequestListComponent {
     // Add more leave requests here
   ];
 
-  selectedRequest: any;
+  selectedRequest: any = null;
   showModal = false;
+
+  constructor(private cdr: ChangeDetectorRef) {}
+
+  ngOnInit() {
+    console.log("LeaveRequestListComponent initialized");
+  }
 
   viewRequest(request: any) {
     this.selectedRequest = { ...request };
@@ -39,9 +45,13 @@ export class LeaveRequestListComponent {
     if (index > -1) {
       this.leaveRequests[index] = updatedRequest;
     }
+    this.showModal = false;
+    this.cdr.detectChanges(); // Force change detection
   }
 
   deleteRequest(requestToDelete: any) {
     this.leaveRequests = this.leaveRequests.filter(req => req.startDate !== requestToDelete.startDate || req.endDate !== requestToDelete.endDate);
+    this.showModal = false;
+    this.cdr.detectChanges(); // Force change detection
   }
 }

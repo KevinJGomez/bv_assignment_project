@@ -1,25 +1,31 @@
+.leave-request-container {
+  height: calc(100vh - 80px); /* Adjust this value based on the height of the header */
+  overflow-y: auto;
+}
+
+.card {
+  height: 100%;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
 .form-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.form-group {
+  flex: 1 1 20%;
+}
+
+@media (max-width: 768px) {
   .form-group {
-    flex: 1 1 20%;
+    flex: 1 1 100%;
   }
-  
-  @media (max-width: 768px) {
-    .form-group {
-      flex: 1 1 100%;
-    }
-  }
-  
-  .full-screen {
-    height: 100vh;
-    background-color: white;
-  }
-  
-  .bg-white {
-    background-color: white !important;
-  }
-  
+}

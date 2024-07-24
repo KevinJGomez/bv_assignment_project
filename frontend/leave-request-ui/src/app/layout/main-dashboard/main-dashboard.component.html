@@ -1,4 +1,4 @@
-<app-header (toggle)="toggleSidebar()"></app-header>
+<!-- <app-header (toggle)="toggleSidebar()"></app-header>
 <div class="container-fluid">
   <div class="row">
     <div class="col-12 col-md-2 p-0">
@@ -8,4 +8,19 @@
       <router-outlet></router-outlet>
     </div>
   </div>
+</div> -->
+
+<app-header (toggle)="toggleSidebar()"></app-header>
+<div class="container-fluid main-container" [class.toggled]="isToggled">
+  <div class="row">
+    <div class="col-12 col-md-2 p-0">
+      <app-sidebar [isToggled]="isToggled" (viewChange)="setView($event)"></app-sidebar>
+    </div>
+    <div class="col-12 col-md-10 p-0 main-content" [class.full-width]="isToggled">
+      <app-leave-request *ngIf="currentView === 'leave-request'" class="leave-request-container"></app-leave-request>
+      <app-leave-request-list *ngIf="currentView === 'leave-request-list'" class="leave-request-list-container"></app-leave-request-list>
+    </div>
+  </div>
 </div>
+
+

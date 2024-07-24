@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output, ChangeDetectorRef  } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
@@ -16,6 +16,14 @@ export class LeaveRequestModalComponent {
   @Output() delete = new EventEmitter<any>();
   @Output() close = new EventEmitter<void>();
 
+  constructor(private cdr: ChangeDetectorRef) {}
+
+  closeModal() {
+    this.show = false;
+    this.close.emit();
+    this.cdr.detectChanges(); // Force change detection
+  }
+
   updateRequest() {
     this.update.emit(this.leaveRequest);
     this.closeModal();
@@ -24,10 +32,5 @@ export class LeaveRequestModalComponent {
   deleteRequest() {
     this.delete.emit(this.leaveRequest);
     this.closeModal();
-  }
-
-  closeModal() {
-    this.show = false;
-    this.close.emit();
   }
 }

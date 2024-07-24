@@ -1,17 +1,20 @@
-import { Component,Input, EventEmitter, Output } from '@angular/core';
-
+import { Component,Input, EventEmitter, Output,ChangeDetectorRef  } from '@angular/core';
+import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-sidebar',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.scss'
 })
 export class SidebarComponent {
   @Input() isToggled: boolean = false;
-  @Output() selectOption = new EventEmitter<string>();
+  @Output() viewChange = new EventEmitter<string>();
 
-  onOptionClick(option: string) {
-    this.selectOption.emit(option);
+  constructor(private cdr: ChangeDetectorRef) {}
+
+  changeView(view: string) {
+    this.viewChange.emit(view);
+    this.cdr.detectChanges(); // Force change detection
   }
 }

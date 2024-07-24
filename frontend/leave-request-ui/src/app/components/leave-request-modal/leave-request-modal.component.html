@@ -1,42 +1,41 @@
 <div class="modal" tabindex="-1" role="dialog" [class.show]="show" (click)="closeModal()">
-    <div class="modal-dialog" role="document" (click)="$event.stopPropagation()">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Update Leave Request</h5>
-          <button type="button" class="close" (click)="closeModal()">
-            <span>&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <form #updateForm="ngForm">
-            <div class="form-group">
-              <label for="leaveType">Leave Type</label>
-              <select class="form-control" id="leaveType" required [(ngModel)]="leaveRequest.leaveType" name="leaveType">
-                <option value="sick">Sick Leave</option>
-                <option value="vacation">Vacation</option>
-                <option value="personal">Personal Leave</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="startDate">Start Date</label>
-              <input type="date" class="form-control" id="startDate" required [(ngModel)]="leaveRequest.startDate" name="startDate">
-            </div>
-            <div class="form-group">
-              <label for="endDate">End Date</label>
-              <input type="date" class="form-control" id="endDate" required [(ngModel)]="leaveRequest.endDate" name="endDate">
-            </div>
-            <div class="form-group">
-              <label for="reason">Reason for Leave</label>
-              <textarea class="form-control" id="reason" rows="3" required [(ngModel)]="leaveRequest.reason" name="reason"></textarea>
-            </div>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary" (click)="updateRequest()">Update</button>
-          <button type="button" class="btn btn-danger" (click)="deleteRequest()">Delete</button>
-          <button type="button" class="btn btn-secondary" (click)="closeModal()">Close</button>
-        </div>
+  <div class="modal-dialog" role="document" (click)="$event.stopPropagation()">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Update Leave Request</h5>
+        <button type="button" class="close" (click)="closeModal()">
+          <span>&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form #updateForm="ngForm">
+          <div class="form-group">
+            <label for="leaveType">Leave Type</label>
+            <select class="form-control" id="leaveType" required  name="leaveType">
+              <option value="sick">Sick Leave</option>
+              <option value="vacation">Vacation</option>
+              <option value="personal">Personal Leave</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="startDate">Start Date</label>
+            <input type="date" class="form-control" id="startDate" required  name="startDate">
+          </div>
+          <div class="form-group">
+            <label for="endDate">End Date</label>
+            <input type="date" class="form-control" id="endDate" required  name="endDate">
+          </div>
+          <div class="form-group">
+            <label for="reason">Reason for Leave</label>
+            <textarea class="form-control" id="reason" rows="3" required  name="reason"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" (click)="updateRequest()">Update</button>
+        <button type="button" class="btn btn-danger" (click)="deleteRequest()">Delete</button>
+        <button type="button" class="btn btn-secondary" (click)="closeModal()">Close</button>
       </div>
     </div>
   </div>
-  
+</div>

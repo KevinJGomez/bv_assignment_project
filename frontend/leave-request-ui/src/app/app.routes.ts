@@ -4,13 +4,14 @@ import { MainDashboardComponent } from './layout/main-dashboard/main-dashboard.c
 import { LeaveRequestListComponent } from './components/leave-request-list/leave-request-list.component';
 import { LoginComponent } from './components/auth/login/login.component';
 import { SignUpComponent } from './components/auth/sign-up/sign-up.component';
+
 export const routes: Routes = [
     { path: 'login', component: LoginComponent },
     { path: 'signup', component: SignUpComponent },
     { path: 'dashboard', component: MainDashboardComponent, children: [
-        { path: 'request-leave', component: LeaveRequestComponent },
-        { path: 'leave-list', component: LeaveRequestListComponent },
-        { path: '', redirectTo: 'request-leave', pathMatch: 'full' }
+        { path: '', component: LeaveRequestComponent },
+        // { path: 'leave-list', component: LeaveRequestListComponent },
+        // { path: '', redirectTo: 'request-leave', pathMatch: 'full' }
       ] },
       { path: '', redirectTo: '/login', pathMatch: 'full' },
       { path: '**', redirectTo: '/login' }
