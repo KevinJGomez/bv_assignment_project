@@ -1,10 +1,12 @@
 import { Routes } from '@angular/router';
-import { LoginComponent } from './login/login.component';
-import { MainDashboardComponent } from './main-dashboard/main-dashboard.component';
-import { LeaveRequestComponent } from './leave-request/leave-request.component';
-import { LeaveRequestListComponent } from './leave-request-list/leave-request-list.component';
+import { LeaveRequestComponent } from './components/leave-request/leave-request.component';
+import { MainDashboardComponent } from './layout/main-dashboard/main-dashboard.component';
+import { LeaveRequestListComponent } from './components/leave-request-list/leave-request-list.component';
+import { LoginComponent } from './components/auth/login/login.component';
+import { SignUpComponent } from './components/auth/sign-up/sign-up.component';
 export const routes: Routes = [
     { path: 'login', component: LoginComponent },
+    { path: 'signup', component: SignUpComponent },
     { path: 'dashboard', component: MainDashboardComponent, children: [
         { path: 'request-leave', component: LeaveRequestComponent },
         { path: 'leave-list', component: LeaveRequestListComponent },

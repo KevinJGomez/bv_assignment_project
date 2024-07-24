@@ -5,8 +5,7 @@
       <app-sidebar [isToggled]="isToggled"></app-sidebar>
     </div>
     <div class="col-12 col-md-10 p-0 main-content" [class.full-width]="isToggled">
-      <!-- <app-leave-request *ngIf="!showLeaveList"></app-leave-request> -->
-      <app-leave-request-list></app-leave-request-list>
+      <router-outlet></router-outlet>
     </div>
   </div>
 </div>

@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { SidebarComponent } from './sidebar/sidebar.component';
-import { HeaderComponent } from './header/header.component';
-import { MainDashboardComponent } from './main-dashboard/main-dashboard.component';
-import { LoginComponent } from './login/login.component';
+import { SidebarComponent } from './layout/sidebar/sidebar.component';
+import { HeaderComponent } from './layout/header/header.component';
+import { LoginComponent } from './components/auth/login/login.component';
+import { MainDashboardComponent } from './layout/main-dashboard/main-dashboard.component';
 
 @Component({
   selector: 'app-root',

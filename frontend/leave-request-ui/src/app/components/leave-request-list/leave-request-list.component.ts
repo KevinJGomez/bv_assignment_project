@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LeaveRequestModalComponent } from '../leave-request-modal/leave-request-modal.component';
+
 @Component({
   selector: 'app-leave-request-list',
   standalone: true,
