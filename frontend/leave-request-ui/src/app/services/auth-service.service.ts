@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class AuthServiceService {
-  api_auth_url: string = 'http://localhost:8080/api/auth/';
+  api_auth_url: string = 'http://localhost:9090/api/auth/';
 
   constructor(private http: HttpClient, private router: Router) {}
 
@@ -29,7 +29,6 @@ export class AuthServiceService {
     );
   }
 
-  // user registration
   // User Registration
   register(data: any) {
     const authOptions = {
@@ -43,7 +42,23 @@ export class AuthServiceService {
       }),
       catchError((err) => {
         console.log(err);
-        alert(err.status + ' code: Registration Failed: ' + err.error.message);
+        return throwError(err);
+      })
+    );
+  }
+
+  // user verify
+  verify(data: any) {
+    const authOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+      }),
+    };
+    return this.http.post(this.api_auth_url + 'verify', data).pipe(
+      map((val) => {
+        return val;
+      }),
+      catchError((err) => {
         return throwError(err);
       })
     );

@@ -48,37 +48,29 @@ export class LoginComponent implements OnInit{
         .pipe(
           first(),
           catchError((err) => {
-            this.myForm.reset();
-            Swal.fire({
-              icon: 'error',
-              title: 'Login Failed',
-              text: 'Invalid username or password',
-            });
-            throw err;
+            return err;
           })
         )
         .subscribe((data: any) => {
-          if (sessionStorage.getItem('access_token') == undefined) {
-            sessionStorage.setItem('access_token', data.jwtToken);
-            sessionStorage.setItem('name', data.fname);
-          } else {
-            sessionStorage.removeItem('access_token');
-            sessionStorage.removeItem('name');
-            sessionStorage.removeItem('mobile');
-            sessionStorage.removeItem('role');
-            sessionStorage.setItem('access_token', data.jwtToken);
-            sessionStorage.setItem('name', data.fname);
-            sessionStorage.setItem('mobile', data.mobile);
-            sessionStorage.setItem('role', data.role);
+          if(data.resCode !== "0"){
+            Swal.fire({
+              icon: 'error',
+              title: 'Login Failed',
+              text: data.data,
+            });
           }
-          Swal.fire({
-            icon: 'success',
-            title: 'Login Successful',
-            showConfirmButton: false,
-            timer: 1500
-          }).then(() => {
-            this.router.navigate(['dashboard']);
-          });
+          else{
+            Swal.fire({
+              icon: 'success',
+              title: 'Login Successful',
+              showConfirmButton: false,
+              timer: 1500
+            }).then(() => {
+              sessionStorage.setItem("__tk", data.data)
+              this.router.navigate(['dashboard']);
+            });
+          }
+          
         });
     }
   }

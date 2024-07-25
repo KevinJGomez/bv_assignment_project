@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -8,7 +8,7 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './leave-request.component.html',
   styleUrl: './leave-request.component.scss'
 })
-export class LeaveRequestComponent {
+export class LeaveRequestComponent{
   leaveRequest = {
     leaveType: '',
     startDate: '',

@@ -34,3 +34,485 @@
 11:01:15.224 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 11:01:15.225 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 11:01:15.234 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+11:17:25.490 [main] INFO  c.b.a.l.LeaveRequestApiApplication - Starting LeaveRequestApiApplication using Java 17.0.10 on KEVIN-GOMEZ-HP with PID 716 (D:\Work\BV\bv_assignment_project\backend\leave-request-api\target\classes started by KevinGomez in D:\Work\BV\bv_assignment_project\backend\leave-request-api)
+11:17:25.493 [main] INFO  c.b.a.l.LeaveRequestApiApplication - No active profile set, falling back to 1 default profile: "default"
+11:17:26.260 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+11:17:26.335 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 63 ms. Found 1 JPA repository interfaces.
+11:17:26.997 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9090 (http)
+11:17:27.009 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9090"]
+11:17:27.009 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+11:17:27.010 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+11:17:27.120 [main] INFO  o.a.c.c.C.[.[.[/springService] - Initializing Spring embedded WebApplicationContext
+11:17:27.120 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1561 ms
+11:17:27.370 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+11:17:27.434 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.10.Final
+11:17:27.603 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+11:17:27.707 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+11:17:28.075 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+11:17:28.095 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+11:17:28.654 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+11:17:28.658 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+11:17:28.719 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+11:17:29.262 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5da1a97f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4b5f022f, org.springframework.security.web.context.SecurityContextPersistenceFilter@8f374de, org.springframework.security.web.header.HeaderWriterFilter@2f2f92f, org.springframework.security.web.authentication.logout.LogoutFilter@11d422fd, com.bv.assignment.leave_request_api.config.JwtTokenFilter@7a569672, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1bba9862, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@416c1b0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@49f41c2e, org.springframework.security.web.session.SessionManagementFilter@6765b6a2, org.springframework.security.web.access.ExceptionTranslationFilter@291028d7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@221cdd87]
+11:17:29.611 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9090"]
+11:17:29.631 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9090 (http) with context path '/springService'
+11:17:29.637 [main] INFO  c.b.a.l.LeaveRequestApiApplication - Started LeaveRequestApiApplication in 4.51 seconds (JVM running for 4.984)
+11:17:37.346 [http-nio-9090-exec-3] INFO  o.a.c.c.C.[.[.[/springService] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+11:17:37.346 [http-nio-9090-exec-3] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+11:17:37.347 [http-nio-9090-exec-3] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+11:17:37.537 [http-nio-9090-exec-3] INFO  c.b.a.l.controller.AuthController - 5b1d6af6bdbe44d4a276330e50d5c21e  AuthController: register Method Called...Username: admin
+11:17:37.544 [http-nio-9090-exec-3] INFO  c.b.a.l.service.AuthService - 5b1d6af6bdbe44d4a276330e50d5c21e  AuthService: saveUser Method Called...Username: admin
+11:19:15.590 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+11:19:15.591 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+11:19:15.596 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+11:20:13.224 [main] INFO  c.b.a.l.LeaveRequestApiApplication - Starting LeaveRequestApiApplication using Java 17.0.10 on KEVIN-GOMEZ-HP with PID 10564 (D:\Work\BV\bv_assignment_project\backend\leave-request-api\target\classes started by KevinGomez in D:\Work\BV\bv_assignment_project\backend\leave-request-api)
+11:20:13.227 [main] INFO  c.b.a.l.LeaveRequestApiApplication - No active profile set, falling back to 1 default profile: "default"
+11:20:13.794 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+11:20:13.838 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 32 ms. Found 1 JPA repository interfaces.
+11:20:14.494 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9090 (http)
+11:20:14.501 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9090"]
+11:20:14.501 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+11:20:14.501 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+11:20:14.586 [main] INFO  o.a.c.c.C.[.[.[/springService] - Initializing Spring embedded WebApplicationContext
+11:20:14.586 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1317 ms
+11:20:14.780 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+11:20:14.826 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.10.Final
+11:20:14.979 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+11:20:15.061 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+11:20:15.321 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+11:20:15.343 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+11:20:15.883 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+11:20:15.885 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+11:20:15.973 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+11:20:16.500 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@194eae3e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2ab39942, org.springframework.security.web.context.SecurityContextPersistenceFilter@1317ac2c, org.springframework.security.web.header.HeaderWriterFilter@ebff59d, org.springframework.security.web.authentication.logout.LogoutFilter@6cbb6c41, com.bv.assignment.leave_request_api.config.JwtTokenFilter@64186f60, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@363ba634, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4ac0d49, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@de40aa1, org.springframework.security.web.session.SessionManagementFilter@451a4187, org.springframework.security.web.access.ExceptionTranslationFilter@50a1af86, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2761156e]
+11:20:16.825 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9090"]
+11:20:16.858 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9090 (http) with context path '/springService'
+11:20:16.867 [main] INFO  c.b.a.l.LeaveRequestApiApplication - Started LeaveRequestApiApplication in 3.982 seconds (JVM running for 4.413)
+11:20:19.078 [http-nio-9090-exec-2] INFO  o.a.c.c.C.[.[.[/springService] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+11:20:19.078 [http-nio-9090-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+11:20:19.079 [http-nio-9090-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+11:20:19.184 [http-nio-9090-exec-2] INFO  c.b.a.l.controller.AuthController - c493ec76ba19469caebe47f2d82bb2d3  AuthController: register Method Called...Username: admin
+11:20:19.184 [http-nio-9090-exec-2] ERROR c.b.a.l.controller.AuthController - c493ec76ba19469caebe47f2d82bb2d3 : ERROR: AuthController register: 
+11:21:15.909 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+11:21:15.912 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+11:21:15.918 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+11:21:26.402 [main] INFO  c.b.a.l.LeaveRequestApiApplication - Starting LeaveRequestApiApplication using Java 17.0.10 on KEVIN-GOMEZ-HP with PID 2732 (D:\Work\BV\bv_assignment_project\backend\leave-request-api\target\classes started by KevinGomez in D:\Work\BV\bv_assignment_project\backend\leave-request-api)
+11:21:26.404 [main] INFO  c.b.a.l.LeaveRequestApiApplication - No active profile set, falling back to 1 default profile: "default"
+11:21:27.120 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+11:21:27.175 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 42 ms. Found 1 JPA repository interfaces.
+11:21:27.765 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9090 (http)
+11:21:27.777 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9090"]
+11:21:27.778 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+11:21:27.778 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+11:21:27.911 [main] INFO  o.a.c.c.C.[.[.[/springService] - Initializing Spring embedded WebApplicationContext
+11:21:27.912 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1467 ms
+11:21:28.108 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+11:21:28.163 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.10.Final
+11:21:28.319 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+11:21:28.398 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+11:21:28.633 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+11:21:28.644 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+11:21:29.114 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+11:21:29.118 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+11:21:29.154 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+11:21:29.606 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@18bc1064, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3cab07dd, org.springframework.security.web.context.SecurityContextPersistenceFilter@7204d98f, org.springframework.security.web.header.HeaderWriterFilter@6244afc4, org.springframework.security.web.authentication.logout.LogoutFilter@6db04a6, com.bv.assignment.leave_request_api.config.JwtTokenFilter@68f264bf, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7c9512c6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3ec211cc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@77988c45, org.springframework.security.web.session.SessionManagementFilter@34e9de8d, org.springframework.security.web.access.ExceptionTranslationFilter@59ec5a0b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1e288c76]
+11:21:29.909 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9090"]
+11:21:29.930 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9090 (http) with context path '/springService'
+11:21:29.938 [main] INFO  c.b.a.l.LeaveRequestApiApplication - Started LeaveRequestApiApplication in 3.834 seconds (JVM running for 4.255)
+11:22:24.680 [http-nio-9090-exec-3] INFO  o.a.c.c.C.[.[.[/springService] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+11:22:24.681 [http-nio-9090-exec-3] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+11:22:24.856 [http-nio-9090-exec-3] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 175 ms
+11:22:25.045 [http-nio-9090-exec-3] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `com.bv.assignment.leave_request_api.models.RequestUser$Role` from String "admin": not one of the values accepted for Enum class: [USER, ADMIN]; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `com.bv.assignment.leave_request_api.models.RequestUser$Role` from String "admin": not one of the values accepted for Enum class: [USER, ADMIN]<EOL> at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 4, column: 13] (through reference chain: com.bv.assignment.leave_request_api.models.RequestUser["role"])]
+11:23:06.871 [http-nio-9090-exec-2] INFO  c.b.a.l.controller.AuthController - fafd447899d944a8b0a02f6fcc3c9c42  AuthController: register Method Called...Username: kevin
+11:23:06.874 [http-nio-9090-exec-2] INFO  c.b.a.l.service.AuthService - fafd447899d944a8b0a02f6fcc3c9c42  AuthService: saveUser Method Called...Username: kevin
+11:23:54.922 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+11:23:54.923 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+11:23:54.932 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+11:32:08.527 [main] INFO  c.b.a.l.LeaveRequestApiApplication - Starting LeaveRequestApiApplication using Java 17.0.10 on KEVIN-GOMEZ-HP with PID 13280 (D:\Work\BV\bv_assignment_project\backend\leave-request-api\target\classes started by KevinGomez in D:\Work\BV\bv_assignment_project\backend\leave-request-api)
+11:32:08.529 [main] INFO  c.b.a.l.LeaveRequestApiApplication - No active profile set, falling back to 1 default profile: "default"
+11:32:09.166 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+11:32:09.219 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 41 ms. Found 1 JPA repository interfaces.
+11:32:09.938 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9090 (http)
+11:32:09.950 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9090"]
+11:32:09.951 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+11:32:09.951 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+11:32:10.068 [main] INFO  o.a.c.c.C.[.[.[/springService] - Initializing Spring embedded WebApplicationContext
+11:32:10.068 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1503 ms
+11:32:10.297 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+11:32:10.340 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.10.Final
+11:32:10.491 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+11:32:10.569 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+11:32:10.850 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+11:32:10.873 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+11:32:11.424 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+11:32:11.428 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+11:32:11.474 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+11:32:11.981 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7c79f2cf, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@63551c66, org.springframework.security.web.context.SecurityContextPersistenceFilter@6ee186f3, org.springframework.security.web.header.HeaderWriterFilter@284b487f, org.springframework.security.web.authentication.logout.LogoutFilter@1734b1a, com.bv.assignment.leave_request_api.config.JwtTokenFilter@2761156e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@38197e82, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@8f374de, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4cf15477, org.springframework.security.web.session.SessionManagementFilter@3e0327dd, org.springframework.security.web.access.ExceptionTranslationFilter@1322b542, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@25d23478]
+11:32:12.290 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9090"]
+11:32:12.313 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9090 (http) with context path '/springService'
+11:32:12.321 [main] INFO  c.b.a.l.LeaveRequestApiApplication - Started LeaveRequestApiApplication in 4.08 seconds (JVM running for 4.498)
+11:32:38.902 [http-nio-9090-exec-2] INFO  o.a.c.c.C.[.[.[/springService] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+11:32:38.905 [http-nio-9090-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+11:32:39.062 [http-nio-9090-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 157 ms
+11:32:39.251 [http-nio-9090-exec-2] INFO  c.b.a.l.controller.AuthController - 1b27b7bf5b804f7b979c8d80934029ac  AuthController: Login Method Called...Username: kevin
+11:32:39.252 [http-nio-9090-exec-2] INFO  c.b.a.l.service.AuthService - 1b27b7bf5b804f7b979c8d80934029ac  AuthService: findByUsername Method Called...Username: kevin
+11:32:39.596 [http-nio-9090-exec-2] ERROR c.b.a.l.service.AuthService - 1b27b7bf5b804f7b979c8d80934029ac : ERROR: AuthService findByUsername: 
+11:33:13.194 [http-nio-9090-exec-6] INFO  c.b.a.l.controller.AuthController - 3618f53e568641d39c821b38662e301e  AuthController: Login Method Called...Username: kevin
+11:33:13.195 [http-nio-9090-exec-6] INFO  c.b.a.l.service.AuthService - 3618f53e568641d39c821b38662e301e  AuthService: findByUsername Method Called...Username: kevin
+11:33:13.196 [http-nio-9090-exec-6] ERROR c.b.a.l.service.AuthService - 3618f53e568641d39c821b38662e301e : ERROR: AuthService findByUsername: 
+11:33:19.186 [http-nio-9090-exec-7] INFO  c.b.a.l.controller.AuthController - 2e51b0ff63b64288bd7a326e8832b45f  AuthController: register Method Called...Username: kevin
+11:33:19.187 [http-nio-9090-exec-7] INFO  c.b.a.l.service.AuthService - 2e51b0ff63b64288bd7a326e8832b45f  AuthService: saveUser Method Called...Username: kevin
+11:33:24.518 [http-nio-9090-exec-8] INFO  c.b.a.l.controller.AuthController - dcdd36dfc9fc4de3a02ce6cb4882a1b5  AuthController: register Method Called...Username: kevin
+11:33:24.518 [http-nio-9090-exec-8] ERROR c.b.a.l.controller.AuthController - dcdd36dfc9fc4de3a02ce6cb4882a1b5 : ERROR: AuthController register: 
+11:33:33.712 [http-nio-9090-exec-10] INFO  c.b.a.l.controller.AuthController - 000ef80da3834398ae2a749d28c28da8  AuthController: Login Method Called...Username: kevin
+11:33:33.712 [http-nio-9090-exec-10] INFO  c.b.a.l.service.AuthService - 000ef80da3834398ae2a749d28c28da8  AuthService: findByUsername Method Called...Username: kevin
+14:05:30.481 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+14:05:30.514 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+14:05:30.523 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+14:09:07.455 [main] INFO  c.b.a.l.LeaveRequestApiApplication - Starting LeaveRequestApiApplication using Java 17.0.10 on KEVIN-GOMEZ-HP with PID 16704 (D:\Work\BV\bv_assignment_project\backend\leave-request-api\target\classes started by KevinGomez in D:\Work\BV\bv_assignment_project\backend\leave-request-api)
+14:09:07.457 [main] INFO  c.b.a.l.LeaveRequestApiApplication - No active profile set, falling back to 1 default profile: "default"
+14:09:08.032 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+14:09:08.135 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 71 ms. Found 1 JPA repository interfaces.
+14:09:08.829 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9090 (http)
+14:09:08.841 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9090"]
+14:09:08.841 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+14:09:08.841 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+14:09:08.960 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+14:09:08.960 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1460 ms
+14:09:09.181 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+14:09:09.242 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.10.Final
+14:09:09.410 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+14:09:09.472 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+14:09:09.887 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+14:09:09.910 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+14:09:10.443 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+14:09:10.448 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+14:09:10.532 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+14:09:10.981 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@51e1e058, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@23e0c200, org.springframework.security.web.context.SecurityContextPersistenceFilter@2b4954a4, org.springframework.security.web.header.HeaderWriterFilter@7c9512c6, org.springframework.security.web.authentication.logout.LogoutFilter@1f7557fe, com.bv.assignment.leave_request_api.config.JwtTokenFilter@25d23478, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@cfc4601, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@ebff59d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@677c2820, org.springframework.security.web.session.SessionManagementFilter@2e40ea48, org.springframework.security.web.access.ExceptionTranslationFilter@7204d98f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1002b06d]
+14:09:11.280 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9090"]
+14:09:11.301 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9090 (http) with context path ''
+14:09:11.311 [main] INFO  c.b.a.l.LeaveRequestApiApplication - Started LeaveRequestApiApplication in 4.184 seconds (JVM running for 4.664)
+14:09:21.042 [http-nio-9090-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+14:09:21.042 [http-nio-9090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+14:09:21.042 [http-nio-9090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+14:09:21.117 [http-nio-9090-exec-1] INFO  c.b.a.l.controller.AuthController - 5107ba85c7f843339885e5965d726a8c  AuthController: Login Method Called...Username: kevin
+14:09:21.118 [http-nio-9090-exec-1] INFO  c.b.a.l.service.AuthService - 5107ba85c7f843339885e5965d726a8c  AuthService: findByUsername Method Called...Username: kevin
+14:12:29.138 [http-nio-9090-exec-8] INFO  c.b.a.l.controller.AuthController - 19335566638d41b98ae7cf816e5cad91  AuthController: register Method Called...Username: kevin
+14:12:29.138 [http-nio-9090-exec-8] INFO  c.b.a.l.service.AuthService - 19335566638d41b98ae7cf816e5cad91  AuthService: saveUser Method Called...Username: kevin
+14:12:29.217 [http-nio-9090-exec-8] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 1062, SQLState: 23000
+14:12:29.218 [http-nio-9090-exec-8] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Duplicate entry 'kevin' for key 'users.UK_r43af9ap4edm43mmtq01oddj6'
+14:12:29.226 [http-nio-9090-exec-8] ERROR c.b.a.l.service.AuthService - 19335566638d41b98ae7cf816e5cad91 : ERROR: AuthService saveUser: kevin
+14:12:29.229 [http-nio-9090-exec-8] ERROR c.b.a.l.controller.AuthController - 19335566638d41b98ae7cf816e5cad91 : ERROR: AuthController register: 
+14:14:33.737 [http-nio-9090-exec-5] INFO  c.b.a.l.controller.AuthController - 8a5eb134ab6a423b963cf8a8fe690964  AuthController: register Method Called...Username: kevin
+14:14:33.737 [http-nio-9090-exec-5] INFO  c.b.a.l.service.AuthService - 8a5eb134ab6a423b963cf8a8fe690964  AuthService: saveUser Method Called...Username: kevin
+14:14:33.782 [http-nio-9090-exec-5] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 1062, SQLState: 23000
+14:14:33.782 [http-nio-9090-exec-5] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Duplicate entry 'kevin' for key 'users.UK_r43af9ap4edm43mmtq01oddj6'
+14:14:33.799 [http-nio-9090-exec-5] ERROR c.b.a.l.service.AuthService - 8a5eb134ab6a423b963cf8a8fe690964 : ERROR: AuthService saveUser: kevin
+14:14:33.799 [http-nio-9090-exec-5] ERROR c.b.a.l.controller.AuthController - 8a5eb134ab6a423b963cf8a8fe690964 : ERROR: AuthController register: 
+14:24:50.422 [http-nio-9090-exec-10] INFO  c.b.a.l.controller.AuthController - cdb161ac36d042ac99891e7a8e88bc6f  AuthController: register Method Called...Username: kevin
+14:24:50.422 [http-nio-9090-exec-10] INFO  c.b.a.l.service.AuthService - cdb161ac36d042ac99891e7a8e88bc6f  AuthService: saveUser Method Called...Username: kevin
+14:24:50.486 [http-nio-9090-exec-10] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 1062, SQLState: 23000
+14:24:50.486 [http-nio-9090-exec-10] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Duplicate entry 'kevin' for key 'users.UK_r43af9ap4edm43mmtq01oddj6'
+14:24:50.497 [http-nio-9090-exec-10] ERROR c.b.a.l.service.AuthService - cdb161ac36d042ac99891e7a8e88bc6f : ERROR: AuthService saveUser: kevin
+14:24:50.497 [http-nio-9090-exec-10] ERROR c.b.a.l.controller.AuthController - cdb161ac36d042ac99891e7a8e88bc6f : ERROR: AuthController register: 
+14:25:47.099 [http-nio-9090-exec-1] INFO  c.b.a.l.controller.AuthController - 6f9ba79d13144874bcc41071b7e45619  AuthController: register Method Called...Username: kevin
+14:25:47.099 [http-nio-9090-exec-1] INFO  c.b.a.l.service.AuthService - 6f9ba79d13144874bcc41071b7e45619  AuthService: saveUser Method Called...Username: kevin
+14:25:47.161 [http-nio-9090-exec-1] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 1062, SQLState: 23000
+14:25:47.161 [http-nio-9090-exec-1] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Duplicate entry 'kevin' for key 'users.UK_r43af9ap4edm43mmtq01oddj6'
+14:25:47.164 [http-nio-9090-exec-1] ERROR c.b.a.l.service.AuthService - 6f9ba79d13144874bcc41071b7e45619 : ERROR: AuthService saveUser: kevin
+14:25:47.165 [http-nio-9090-exec-1] ERROR c.b.a.l.controller.AuthController - 6f9ba79d13144874bcc41071b7e45619 : ERROR: AuthController register: 
+14:28:11.993 [http-nio-9090-exec-8] INFO  c.b.a.l.controller.AuthController - 849e4514ad694ae3a670847f250002f5  AuthController: register Method Called...Username: kevin
+14:28:11.993 [http-nio-9090-exec-8] INFO  c.b.a.l.service.AuthService - 849e4514ad694ae3a670847f250002f5  AuthService: saveUser Method Called...Username: kevin
+14:28:12.050 [http-nio-9090-exec-8] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 1062, SQLState: 23000
+14:28:12.050 [http-nio-9090-exec-8] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Duplicate entry 'kevin' for key 'users.UK_r43af9ap4edm43mmtq01oddj6'
+14:28:12.056 [http-nio-9090-exec-8] ERROR c.b.a.l.service.AuthService - 849e4514ad694ae3a670847f250002f5 : ERROR: AuthService saveUser: kevin
+14:28:12.056 [http-nio-9090-exec-8] ERROR c.b.a.l.controller.AuthController - 849e4514ad694ae3a670847f250002f5 : ERROR: AuthController register: 
+14:28:25.533 [http-nio-9090-exec-9] INFO  c.b.a.l.controller.AuthController - 4c8894b2c4934f6ea64046365cc08736  AuthController: register Method Called...Username: kevin
+14:28:25.533 [http-nio-9090-exec-9] INFO  c.b.a.l.service.AuthService - 4c8894b2c4934f6ea64046365cc08736  AuthService: saveUser Method Called...Username: kevin
+14:28:25.587 [http-nio-9090-exec-9] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 1062, SQLState: 23000
+14:28:25.587 [http-nio-9090-exec-9] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Duplicate entry 'kevin' for key 'users.UK_r43af9ap4edm43mmtq01oddj6'
+14:28:25.603 [http-nio-9090-exec-9] ERROR c.b.a.l.service.AuthService - 4c8894b2c4934f6ea64046365cc08736 : ERROR: AuthService saveUser: kevin
+14:28:25.603 [http-nio-9090-exec-9] ERROR c.b.a.l.controller.AuthController - 4c8894b2c4934f6ea64046365cc08736 : ERROR: AuthController register: 
+14:29:40.972 [http-nio-9090-exec-5] INFO  c.b.a.l.controller.AuthController - 18bb65e2ea0d4a0189fa17fe6f203592  AuthController: register Method Called...Username: jude
+14:29:40.972 [http-nio-9090-exec-5] INFO  c.b.a.l.service.AuthService - 18bb65e2ea0d4a0189fa17fe6f203592  AuthService: saveUser Method Called...Username: jude
+14:31:52.368 [http-nio-9090-exec-4] INFO  c.b.a.l.controller.AuthController - 5885cff7a7cb40ed8bb39518e0ea692c  AuthController: Login Method Called...Username: kevin
+14:31:52.368 [http-nio-9090-exec-4] INFO  c.b.a.l.service.AuthService - 5885cff7a7cb40ed8bb39518e0ea692c  AuthService: findByUsername Method Called...Username: kevin
+14:32:01.033 [http-nio-9090-exec-1] INFO  c.b.a.l.controller.AuthController - 7ca0099eff1a4a59b4a4b9a83f6613d3  AuthController: Login Method Called...Username: kevin
+14:32:01.033 [http-nio-9090-exec-1] INFO  c.b.a.l.service.AuthService - 7ca0099eff1a4a59b4a4b9a83f6613d3  AuthService: findByUsername Method Called...Username: kevin
+14:34:22.398 [http-nio-9090-exec-8] INFO  c.b.a.l.controller.AuthController - 51729d0979c54dac86bf28321f2a3467  AuthController: Login Method Called...Username: kevin
+14:34:22.398 [http-nio-9090-exec-8] INFO  c.b.a.l.service.AuthService - 51729d0979c54dac86bf28321f2a3467  AuthService: findByUsername Method Called...Username: kevin
+14:34:45.251 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+14:34:45.251 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+14:34:45.251 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+14:44:29.593 [main] INFO  c.b.a.l.LeaveRequestApiApplication - Starting LeaveRequestApiApplication using Java 17.0.10 on KEVIN-GOMEZ-HP with PID 5300 (D:\Work\BV\bv_assignment_project\backend\leave-request-api\target\classes started by KevinGomez in D:\Work\BV\bv_assignment_project\backend\leave-request-api)
+14:44:29.593 [main] INFO  c.b.a.l.LeaveRequestApiApplication - No active profile set, falling back to 1 default profile: "default"
+14:44:30.573 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+14:44:30.657 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 50 ms. Found 1 JPA repository interfaces.
+14:44:31.483 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9090 (http)
+14:44:31.499 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9090"]
+14:44:31.499 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+14:44:31.499 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+14:44:31.646 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+14:44:31.646 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2017 ms
+14:44:31.884 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+14:44:31.944 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.10.Final
+14:44:32.118 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+14:44:32.212 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+14:44:32.510 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+14:44:32.526 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+14:44:32.997 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+14:44:33.013 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+14:44:33.107 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+14:44:33.578 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7c45191e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@ef220e4, org.springframework.security.web.context.SecurityContextPersistenceFilter@7204d98f, org.springframework.security.web.header.HeaderWriterFilter@6244afc4, org.springframework.security.web.authentication.logout.LogoutFilter@6db04a6, com.bv.assignment.leave_request_api.config.JwtTokenFilter@18bc1064, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7c9512c6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3ec211cc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3cab07dd, org.springframework.security.web.session.SessionManagementFilter@34e9de8d, org.springframework.security.web.access.ExceptionTranslationFilter@f98cff, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1ddc8fc]
+14:44:33.893 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9090"]
+14:44:33.908 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9090 (http) with context path ''
+14:44:33.924 [main] INFO  c.b.a.l.LeaveRequestApiApplication - Started LeaveRequestApiApplication in 4.656 seconds (JVM running for 5.13)
+14:44:47.757 [http-nio-9090-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+14:44:47.758 [http-nio-9090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+14:44:47.910 [http-nio-9090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 152 ms
+14:44:48.023 [http-nio-9090-exec-1] INFO  c.b.a.l.controller.AuthController - dd4c2e9420f343af96fca029137b1384  AuthController: Login Method Called...Username: null
+14:44:48.024 [http-nio-9090-exec-1] INFO  c.b.a.l.service.AuthService - dd4c2e9420f343af96fca029137b1384  AuthService: findByUsername Method Called...Username: null
+14:44:48.235 [http-nio-9090-exec-1] ERROR c.b.a.l.service.AuthService - dd4c2e9420f343af96fca029137b1384 : ERROR: AuthService findByUsername: 
+14:44:58.146 [http-nio-9090-exec-3] INFO  c.b.a.l.controller.AuthController - 59e8b58887db42efbe2af3b99c375eeb  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@27f26856
+14:45:10.019 [http-nio-9090-exec-2] INFO  c.b.a.l.controller.AuthController - ce8510f9acaa4835bb1ac3006818441f  AuthController: Login Method Called...Username: kevin
+14:45:10.020 [http-nio-9090-exec-2] INFO  c.b.a.l.service.AuthService - ce8510f9acaa4835bb1ac3006818441f  AuthService: findByUsername Method Called...Username: kevin
+14:45:21.101 [http-nio-9090-exec-5] INFO  c.b.a.l.controller.AuthController - 397b17fd94434709b1265620dbf9d30e  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@18d53458
+14:49:12.332 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+14:49:12.333 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+14:49:12.340 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+14:49:21.184 [main] INFO  c.b.a.l.LeaveRequestApiApplication - Starting LeaveRequestApiApplication using Java 17.0.10 on KEVIN-GOMEZ-HP with PID 376 (D:\Work\BV\bv_assignment_project\backend\leave-request-api\target\classes started by KevinGomez in D:\Work\BV\bv_assignment_project\backend\leave-request-api)
+14:49:21.187 [main] INFO  c.b.a.l.LeaveRequestApiApplication - No active profile set, falling back to 1 default profile: "default"
+14:49:21.811 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+14:49:21.871 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 46 ms. Found 1 JPA repository interfaces.
+14:49:22.491 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9090 (http)
+14:49:22.505 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9090"]
+14:49:22.505 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+14:49:22.505 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+14:49:22.626 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+14:49:22.626 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1398 ms
+14:49:22.819 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+14:49:22.865 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.10.Final
+14:49:22.995 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+14:49:23.079 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+14:49:23.344 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+14:49:23.360 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+14:49:23.870 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+14:49:23.876 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+14:49:23.929 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+14:49:24.415 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1d1deb11, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@18d1d137, org.springframework.security.web.context.SecurityContextPersistenceFilter@34e9de8d, org.springframework.security.web.header.HeaderWriterFilter@29431f61, org.springframework.security.web.authentication.logout.LogoutFilter@5516ee5, com.bv.assignment.leave_request_api.config.JwtTokenFilter@5f4f6f89, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@61ca5134, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1b79df53, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7c45191e, org.springframework.security.web.session.SessionManagementFilter@5a9baba8, org.springframework.security.web.access.ExceptionTranslationFilter@3acc65f0, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@76b019c4]
+14:49:24.727 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9090"]
+14:49:24.753 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9090 (http) with context path ''
+14:49:24.761 [main] INFO  c.b.a.l.LeaveRequestApiApplication - Started LeaveRequestApiApplication in 3.878 seconds (JVM running for 4.326)
+14:49:38.302 [http-nio-9090-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+14:49:38.302 [http-nio-9090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+14:49:38.420 [http-nio-9090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 118 ms
+14:49:38.603 [http-nio-9090-exec-1] INFO  c.b.a.l.controller.AuthController - 3e33838df5674dd889ca8acb7b63caff  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@1d750085
+14:49:38.604 [http-nio-9090-exec-1] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: kevin
+14:49:45.401 [http-nio-9090-exec-4] INFO  c.b.a.l.controller.AuthController - 29191e29964b406488f881989d3064a7  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@18d53458
+14:49:45.402 [http-nio-9090-exec-4] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: admin
+14:49:45.405 [http-nio-9090-exec-4] ERROR c.b.a.l.service.AuthService - 1123: ERROR: AuthService findByUsername: 
+14:49:45.407 [http-nio-9090-exec-4] ERROR c.b.a.l.controller.AuthController - 29191e29964b406488f881989d3064a7 : ERROR: AuthController verifyUser: 
+14:56:04.383 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+14:56:04.385 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+14:56:04.390 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+14:56:16.794 [main] INFO  c.b.a.l.LeaveRequestApiApplication - Starting LeaveRequestApiApplication using Java 17.0.10 on KEVIN-GOMEZ-HP with PID 14000 (D:\Work\BV\bv_assignment_project\backend\leave-request-api\target\classes started by KevinGomez in D:\Work\BV\bv_assignment_project\backend\leave-request-api)
+14:56:16.797 [main] INFO  c.b.a.l.LeaveRequestApiApplication - No active profile set, falling back to 1 default profile: "default"
+14:56:17.538 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+14:56:17.621 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 64 ms. Found 1 JPA repository interfaces.
+14:56:18.362 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9090 (http)
+14:56:18.379 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9090"]
+14:56:18.379 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+14:56:18.380 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+14:56:18.496 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+14:56:18.497 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1652 ms
+14:56:18.805 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+14:56:18.859 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.10.Final
+14:56:19.014 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+14:56:19.093 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+14:56:19.378 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+14:56:19.394 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+14:56:19.870 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+14:56:19.875 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+14:56:19.942 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+14:56:20.419 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@77988c45, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@f5f8de2, org.springframework.security.web.context.SecurityContextPersistenceFilter@8636cf4, org.springframework.security.web.header.HeaderWriterFilter@534d0cfa, org.springframework.security.web.authentication.logout.LogoutFilter@8f374de, com.bv.assignment.leave_request_api.config.JwtTokenFilter@6baee63b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4f65af91, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6b94c200, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1002b06d, org.springframework.security.web.session.SessionManagementFilter@33a8f553, org.springframework.security.web.access.ExceptionTranslationFilter@59c38af5, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@478c84aa]
+14:56:20.696 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9090"]
+14:56:20.720 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9090 (http) with context path ''
+14:56:20.728 [main] INFO  c.b.a.l.LeaveRequestApiApplication - Started LeaveRequestApiApplication in 4.262 seconds (JVM running for 4.691)
+14:56:23.292 [http-nio-9090-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+14:56:23.292 [http-nio-9090-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+14:56:23.292 [http-nio-9090-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+14:56:23.393 [http-nio-9090-exec-2] INFO  c.b.a.l.controller.AuthController - fa124dc26f294a8dbb36704d0fdc96eb  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@5cd7b7df
+14:56:23.394 [http-nio-9090-exec-2] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: admin
+14:56:23.480 [http-nio-9090-exec-2] ERROR c.b.a.l.service.AuthService - 1123: ERROR: AuthService findByUsername: 
+14:56:23.500 [http-nio-9090-exec-2] ERROR c.b.a.l.controller.AuthController - fa124dc26f294a8dbb36704d0fdc96eb : ERROR: AuthController verifyUser: 
+14:56:30.845 [http-nio-9090-exec-5] INFO  c.b.a.l.controller.AuthController - bae4956673714ce5a3a07eac424b9dfa  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@2f5e3dbc
+14:56:30.846 [http-nio-9090-exec-5] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: kevin
+15:00:50.800 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+15:00:50.806 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+15:00:50.812 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+15:01:09.078 [main] INFO  c.b.a.l.LeaveRequestApiApplication - Starting LeaveRequestApiApplication using Java 17.0.10 on KEVIN-GOMEZ-HP with PID 10204 (D:\Work\BV\bv_assignment_project\backend\leave-request-api\target\classes started by KevinGomez in D:\Work\BV\bv_assignment_project\backend\leave-request-api)
+15:01:09.080 [main] INFO  c.b.a.l.LeaveRequestApiApplication - No active profile set, falling back to 1 default profile: "default"
+15:01:09.819 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+15:01:09.877 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 46 ms. Found 1 JPA repository interfaces.
+15:01:10.476 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9090 (http)
+15:01:10.491 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9090"]
+15:01:10.491 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+15:01:10.491 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+15:01:10.606 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+15:01:10.607 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1482 ms
+15:01:10.839 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+15:01:10.887 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.10.Final
+15:01:11.039 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+15:01:11.121 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+15:01:11.387 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+15:01:11.402 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+15:01:11.900 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+15:01:11.906 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+15:01:11.968 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+15:01:12.409 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@18bc1064, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3cab07dd, org.springframework.security.web.context.SecurityContextPersistenceFilter@7204d98f, org.springframework.security.web.header.HeaderWriterFilter@6244afc4, org.springframework.security.web.authentication.logout.LogoutFilter@6db04a6, com.bv.assignment.leave_request_api.config.JwtTokenFilter@68f264bf, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7c9512c6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3ec211cc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@77988c45, org.springframework.security.web.session.SessionManagementFilter@34e9de8d, org.springframework.security.web.access.ExceptionTranslationFilter@59ec5a0b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1e288c76]
+15:01:12.708 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9090"]
+15:01:12.726 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9090 (http) with context path ''
+15:01:12.736 [main] INFO  c.b.a.l.LeaveRequestApiApplication - Started LeaveRequestApiApplication in 3.968 seconds (JVM running for 4.382)
+15:01:13.497 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+15:01:13.500 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+15:01:13.506 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+15:02:15.021 [main] INFO  c.b.a.l.LeaveRequestApiApplication - Starting LeaveRequestApiApplication using Java 17.0.10 on KEVIN-GOMEZ-HP with PID 15888 (D:\Work\BV\bv_assignment_project\backend\leave-request-api\target\classes started by KevinGomez in D:\Work\BV\bv_assignment_project\backend\leave-request-api)
+15:02:15.024 [main] INFO  c.b.a.l.LeaveRequestApiApplication - No active profile set, falling back to 1 default profile: "default"
+15:02:15.614 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+15:02:15.671 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 46 ms. Found 1 JPA repository interfaces.
+15:02:16.304 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9090 (http)
+15:02:16.314 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9090"]
+15:02:16.315 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+15:02:16.315 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+15:02:16.448 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+15:02:16.449 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1384 ms
+15:02:16.654 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+15:02:16.691 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.10.Final
+15:02:16.815 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+15:02:16.906 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+15:02:17.170 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+15:02:17.186 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+15:02:17.630 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+15:02:17.634 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+15:02:17.722 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+15:02:18.209 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5f4f6f89, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7c45191e, org.springframework.security.web.context.SecurityContextPersistenceFilter@34e9de8d, org.springframework.security.web.header.HeaderWriterFilter@29431f61, org.springframework.security.web.authentication.logout.LogoutFilter@5516ee5, com.bv.assignment.leave_request_api.config.JwtTokenFilter@ef220e4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@61ca5134, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1b79df53, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@18bc1064, org.springframework.security.web.session.SessionManagementFilter@5a9baba8, org.springframework.security.web.access.ExceptionTranslationFilter@3acc65f0, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@32ddcca]
+15:02:18.473 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9090"]
+15:02:18.493 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9090 (http) with context path ''
+15:02:18.500 [main] INFO  c.b.a.l.LeaveRequestApiApplication - Started LeaveRequestApiApplication in 3.785 seconds (JVM running for 4.241)
+15:02:23.454 [http-nio-9090-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+15:02:23.454 [http-nio-9090-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+15:02:23.455 [http-nio-9090-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+15:02:23.570 [http-nio-9090-exec-2] INFO  c.b.a.l.controller.AuthController - 76cdf452b1654a8483d79c16b74b77c0  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@5cd7b7df
+15:02:23.615 [http-nio-9090-exec-2] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: kevin
+15:02:28.837 [http-nio-9090-exec-3] INFO  c.b.a.l.controller.AuthController - 8f9ee4a1d4694215a9a11a7324e4c56c  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@13c61801
+15:02:35.145 [http-nio-9090-exec-4] INFO  c.b.a.l.controller.AuthController - a6e76170402a4812831dc731248973fa  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@2b788e84
+15:02:35.148 [http-nio-9090-exec-4] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: kevin
+15:13:51.242 [http-nio-9090-exec-7] INFO  c.b.a.l.controller.AuthController - 4dadbe603ef74874b16e69cf857b3eae  AuthController: Login Method Called...Username: kevin
+15:13:51.242 [http-nio-9090-exec-7] INFO  c.b.a.l.service.AuthService - 4dadbe603ef74874b16e69cf857b3eae  AuthService: findByUsername Method Called...Username: kevin
+15:13:52.915 [http-nio-9090-exec-9] INFO  c.b.a.l.controller.AuthController - 595ae4af48d74962bedc7c35186365ac  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@4519f781
+15:13:52.915 [http-nio-9090-exec-9] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: kevin
+15:15:31.282 [http-nio-9090-exec-1] INFO  c.b.a.l.controller.AuthController - 315202647a064e90a46551eb5ca01b16  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@33009e9f
+15:15:31.283 [http-nio-9090-exec-1] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: kevin
+15:15:33.160 [http-nio-9090-exec-2] INFO  c.b.a.l.controller.AuthController - 17482538fbc447c4956adb9e558a68c5  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@ca6ba95
+15:15:33.162 [http-nio-9090-exec-2] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: kevin
+15:15:49.125 [http-nio-9090-exec-3] INFO  c.b.a.l.controller.AuthController - 96215ad8c66142c1832770b75c5b965f  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@c27d198
+15:15:49.127 [http-nio-9090-exec-3] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: kevin
+15:16:06.821 [http-nio-9090-exec-4] INFO  c.b.a.l.controller.AuthController - 9a481d93a9ce4db3bf2d8f24f61daf11  AuthController: Login Method Called...Username: jude
+15:16:06.821 [http-nio-9090-exec-4] INFO  c.b.a.l.service.AuthService - 9a481d93a9ce4db3bf2d8f24f61daf11  AuthService: findByUsername Method Called...Username: jude
+15:16:08.492 [http-nio-9090-exec-5] INFO  c.b.a.l.controller.AuthController - a933409373f1493d9131f8ea19514f01  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@2f5e3dbc
+15:16:08.494 [http-nio-9090-exec-5] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+15:17:09.743 [http-nio-9090-exec-7] INFO  c.b.a.l.controller.AuthController - 21da969d45ac42d1b0ac3c9d3a968981  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@7d131ecf
+15:17:09.745 [http-nio-9090-exec-7] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+15:17:21.273 [http-nio-9090-exec-8] INFO  c.b.a.l.controller.AuthController - 435ee00aa41e4cd0a15caa6dd4c83018  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@5697b1c6
+15:17:21.273 [http-nio-9090-exec-8] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+15:18:30.014 [http-nio-9090-exec-10] INFO  c.b.a.l.controller.AuthController - c0794b40f80140c9aacc16f427980a85  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@3bd2a6d1
+15:18:30.016 [http-nio-9090-exec-10] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+15:20:22.634 [http-nio-9090-exec-2] INFO  c.b.a.l.controller.AuthController - 1b0351d1d7064c3ebddfd703a6ab8553  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@30bf9d84
+15:20:22.637 [http-nio-9090-exec-2] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+15:20:32.090 [http-nio-9090-exec-3] INFO  c.b.a.l.controller.AuthController - a6f2f83f44314a49b6564d7e3731859f  AuthController: Login Method Called...Username: kevin
+15:20:32.090 [http-nio-9090-exec-3] INFO  c.b.a.l.service.AuthService - a6f2f83f44314a49b6564d7e3731859f  AuthService: findByUsername Method Called...Username: kevin
+15:20:33.752 [http-nio-9090-exec-4] INFO  c.b.a.l.controller.AuthController - 8c5e68ac790c487992f01f86198980d4  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@4c30e88f
+15:20:33.753 [http-nio-9090-exec-4] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: kevin
+15:22:18.393 [http-nio-9090-exec-6] INFO  c.b.a.l.controller.AuthController - d6a415c4b28d405c9bd6714fcfa66060  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@3cf8db7a
+15:22:18.394 [http-nio-9090-exec-6] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: kevin
+15:22:32.022 [http-nio-9090-exec-7] INFO  c.b.a.l.controller.AuthController - 79fb6a7ddd0e4aa0972830eb5db4e3cc  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@322c6095
+15:22:32.023 [http-nio-9090-exec-7] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: kevin
+15:22:39.923 [http-nio-9090-exec-8] INFO  c.b.a.l.controller.AuthController - 1ee043c6d35c47d4b5c604b639d7d861  AuthController: Login Method Called...Username: jude
+15:22:39.923 [http-nio-9090-exec-8] INFO  c.b.a.l.service.AuthService - 1ee043c6d35c47d4b5c604b639d7d861  AuthService: findByUsername Method Called...Username: jude
+15:22:41.604 [http-nio-9090-exec-9] INFO  c.b.a.l.controller.AuthController - 5def59152ef142c9adea1e4b64e76984  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@63962178
+15:22:41.609 [http-nio-9090-exec-9] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+15:26:46.230 [http-nio-9090-exec-1] INFO  c.b.a.l.controller.AuthController - 253269c6e3194ef08d13287f4cbb80d6  AuthController: Login Method Called...Username: kevin
+15:26:46.230 [http-nio-9090-exec-1] INFO  c.b.a.l.service.AuthService - 253269c6e3194ef08d13287f4cbb80d6  AuthService: findByUsername Method Called...Username: kevin
+15:26:47.908 [http-nio-9090-exec-2] INFO  c.b.a.l.controller.AuthController - 7fa5866a35fc4a73a54a94b20aef2d6e  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@7ab1128c
+15:26:47.909 [http-nio-9090-exec-2] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: kevin
+15:31:05.337 [http-nio-9090-exec-4] INFO  c.b.a.l.controller.AuthController - 92d5a7e98a87486d94aea16d84d111d2  AuthController: Login Method Called...Username: kevin
+15:31:05.338 [http-nio-9090-exec-4] INFO  c.b.a.l.service.AuthService - 92d5a7e98a87486d94aea16d84d111d2  AuthService: findByUsername Method Called...Username: kevin
+15:31:07.004 [http-nio-9090-exec-5] INFO  c.b.a.l.controller.AuthController - f568bb60757841169a799da1070ee8e5  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@8b3353
+15:31:07.007 [http-nio-9090-exec-5] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: kevin
+15:33:35.146 [http-nio-9090-exec-7] INFO  c.b.a.l.controller.AuthController - 333d10ceeb924765ba938b9805829b58  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@4ac2986b
+15:33:35.148 [http-nio-9090-exec-7] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: kevin
+15:39:11.000 [http-nio-9090-exec-9] INFO  c.b.a.l.controller.AuthController - a28e17fc688a4a78819694a595bbbc0b  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@508603ca
+15:39:11.000 [http-nio-9090-exec-9] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: kevin
+15:39:22.058 [http-nio-9090-exec-10] INFO  c.b.a.l.controller.AuthController - 7dd37577c9004f23aadd9be540ca26e1  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@4596e68a
+15:39:22.059 [http-nio-9090-exec-10] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: kevin
+15:40:14.185 [http-nio-9090-exec-1] INFO  c.b.a.l.controller.AuthController - 3507b2000cb3452eb61677ec09bf25c3  AuthController: Login Method Called...Username: jude
+15:40:14.185 [http-nio-9090-exec-1] INFO  c.b.a.l.service.AuthService - 3507b2000cb3452eb61677ec09bf25c3  AuthService: findByUsername Method Called...Username: jude
+15:40:15.817 [http-nio-9090-exec-2] INFO  c.b.a.l.controller.AuthController - 960e42c652f34aad84ff39110351dde8  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@72247323
+15:40:15.820 [http-nio-9090-exec-2] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+15:40:31.089 [http-nio-9090-exec-3] INFO  c.b.a.l.controller.AuthController - 4ddc7df400b94ac6a69e16fc24a7a2d5  AuthController: Login Method Called...Username: kevin
+15:40:31.089 [http-nio-9090-exec-3] INFO  c.b.a.l.service.AuthService - 4ddc7df400b94ac6a69e16fc24a7a2d5  AuthService: findByUsername Method Called...Username: kevin
+15:40:32.747 [http-nio-9090-exec-4] INFO  c.b.a.l.controller.AuthController - 0dc4caf61e6b4653b96161637444c4c4  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@530b018e
+15:40:32.749 [http-nio-9090-exec-4] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: kevin
+15:43:19.464 [http-nio-9090-exec-6] INFO  c.b.a.l.controller.AuthController - 0f33d1ad8e9b46b3a09beaa6f2da8ad8  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@389104df
+15:43:19.465 [http-nio-9090-exec-6] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: kevin
+15:43:28.549 [http-nio-9090-exec-7] INFO  c.b.a.l.controller.AuthController - 64ba98ec6b0041a998c98dd2686ab370  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@2196d607
+15:43:28.550 [http-nio-9090-exec-7] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: kevin
+15:43:33.385 [http-nio-9090-exec-8] INFO  c.b.a.l.controller.AuthController - 8aef1fd3d1ec4ec5990c064dcf08fc1c  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@2fb782c4
+15:43:33.387 [http-nio-9090-exec-8] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: kevin
+15:43:36.624 [http-nio-9090-exec-9] INFO  c.b.a.l.controller.AuthController - ff0f6bbb1cce431b9d93f6152dd9ba97  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@3be46259
+15:43:36.625 [http-nio-9090-exec-9] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: kevin
+15:43:38.415 [http-nio-9090-exec-10] INFO  c.b.a.l.controller.AuthController - c2a46b3502544d5b9047eeff3704a5b0  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@39324542
+15:43:38.417 [http-nio-9090-exec-10] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: kevin
+15:43:55.371 [http-nio-9090-exec-1] INFO  c.b.a.l.controller.AuthController - ea8c74d9cec549b1b0d96939635d08e0  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@780a528a
+15:43:55.371 [http-nio-9090-exec-1] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: kevin
+15:44:03.615 [http-nio-9090-exec-2] INFO  c.b.a.l.controller.AuthController - b63fc6da1ab74cd4a4aeadbaee187edc  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@18a7abeb
+15:44:03.616 [http-nio-9090-exec-2] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: kevin
+15:44:05.346 [http-nio-9090-exec-3] INFO  c.b.a.l.controller.AuthController - 84b8c8c65600400ab80f5dfaae0f604d  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@20bf9c69
+15:44:05.347 [http-nio-9090-exec-3] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: kevin
+15:44:07.784 [http-nio-9090-exec-4] INFO  c.b.a.l.controller.AuthController - 343ac69427504bab9c71b691c098f237  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@79dbb301
+15:44:07.786 [http-nio-9090-exec-4] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: kevin
+15:44:08.774 [http-nio-9090-exec-5] INFO  c.b.a.l.controller.AuthController - 84e5759b60084e08aea7cdb77072f466  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@609d7423
+15:44:08.776 [http-nio-9090-exec-5] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: kevin
+15:44:10.324 [http-nio-9090-exec-6] INFO  c.b.a.l.controller.AuthController - 1d7a93ffd36b48cab4b4fab0e0c73c63  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@48e13965
+15:44:10.325 [http-nio-9090-exec-6] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: kevin
+15:44:10.958 [http-nio-9090-exec-7] INFO  c.b.a.l.controller.AuthController - 4d8f02b485ae44958d1950e3ab1867d7  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@30f49938
+15:44:10.959 [http-nio-9090-exec-7] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: kevin
+15:44:13.315 [http-nio-9090-exec-8] INFO  c.b.a.l.controller.AuthController - 34079983b0c24e41a27ee1b6b616f80e  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@1f19a514
+15:44:13.316 [http-nio-9090-exec-8] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: kevin
+15:44:14.782 [http-nio-9090-exec-9] INFO  c.b.a.l.controller.AuthController - 7224113dc3084018b8e172094afe295d  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@289a3a57
+15:44:14.783 [http-nio-9090-exec-9] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: kevin
+15:44:16.204 [http-nio-9090-exec-10] INFO  c.b.a.l.controller.AuthController - 16e0e47e032743108bd17f21918f8a92  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@17a42113
+15:44:16.207 [http-nio-9090-exec-10] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: kevin
+15:44:17.559 [http-nio-9090-exec-1] INFO  c.b.a.l.controller.AuthController - b13d1e24a34245858128c84e50bc6f24  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@38bea23
+15:44:17.560 [http-nio-9090-exec-1] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: kevin
+15:44:20.364 [http-nio-9090-exec-2] INFO  c.b.a.l.controller.AuthController - 2c7f310841ba4c4b8ba6d52aec346eda  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@25db8f4f
+15:44:20.365 [http-nio-9090-exec-2] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: kevin
+15:44:37.912 [http-nio-9090-exec-3] INFO  c.b.a.l.controller.AuthController - 3d8a9258b18944b4afe281d72fec2b8b  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@76624f17
+15:44:37.912 [http-nio-9090-exec-3] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: kevin
+15:46:52.903 [http-nio-9090-exec-5] INFO  c.b.a.l.controller.AuthController - 50bf6d5e935449009a6b585be27f3772  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@4bc0ee59
+15:46:52.903 [http-nio-9090-exec-5] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: kevin
+15:47:01.786 [http-nio-9090-exec-6] INFO  c.b.a.l.controller.AuthController - b8cc8ff203dc49c69ded873c89db8fce  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@5b772eea
+15:47:01.787 [http-nio-9090-exec-6] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: kevin
+15:47:05.831 [http-nio-9090-exec-7] INFO  c.b.a.l.controller.AuthController - cc5ae36f929b4fdca59d0bbaa662a512  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@787af4a9
+15:47:05.832 [http-nio-9090-exec-7] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: kevin
+15:47:06.652 [http-nio-9090-exec-8] INFO  c.b.a.l.controller.AuthController - 46fa441c268c4d409f26b3739f236a88  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@60f763d9
+15:47:06.652 [http-nio-9090-exec-8] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: kevin
+15:47:07.369 [http-nio-9090-exec-9] INFO  c.b.a.l.controller.AuthController - 2993e92726eb439387a94db88b14c4dd  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@326c9eee
+15:47:07.369 [http-nio-9090-exec-9] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: kevin
+15:47:08.135 [http-nio-9090-exec-10] INFO  c.b.a.l.controller.AuthController - 42eb509345e248d2a9efad52ae9142c1  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@706ad30
+15:47:08.135 [http-nio-9090-exec-10] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: kevin
+15:47:09.029 [http-nio-9090-exec-1] INFO  c.b.a.l.controller.AuthController - 67f2156b4a0d44c68cbcf1e80ef0be78  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@2d39688d
+15:47:09.031 [http-nio-9090-exec-1] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: kevin
+15:47:32.076 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+15:47:32.076 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+15:47:32.092 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

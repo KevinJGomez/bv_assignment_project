@@ -8,6 +8,7 @@ import io.jsonwebtoken.SignatureException;
 import io.jsonwebtoken.UnsupportedJwtException;
 
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.filter.GenericFilterBean;
 
@@ -22,6 +23,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
+import java.util.Collections;
 
 public class JwtTokenFilter extends GenericFilterBean {
 
@@ -30,7 +32,6 @@ public class JwtTokenFilter extends GenericFilterBean {
     public JwtTokenFilter(String secretKey) {
         this.secretKey = secretKey;
     }
-
 
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
@@ -46,9 +47,11 @@ public class JwtTokenFilter extends GenericFilterBean {
                 Claims claims = Jwts.parser().setSigningKey(secretKey).parseClaimsJws(token).getBody();
 
                 String username = claims.getSubject();
+                String role = claims.get("role", String.class);
 
-                if (username != null) {
-                    UsernamePasswordAuthenticationToken auth = new UsernamePasswordAuthenticationToken(username, null, null);
+                if (username != null && role != null) {
+                    SimpleGrantedAuthority authority = new SimpleGrantedAuthority("ROLE_" + role);
+                    UsernamePasswordAuthenticationToken auth = new UsernamePasswordAuthenticationToken(username, null, Collections.singletonList(authority));
                     SecurityContextHolder.getContext().setAuthentication(auth);
                 }
             }
@@ -70,8 +73,6 @@ public class JwtTokenFilter extends GenericFilterBean {
             return;
         }
 
-
         chain.doFilter(request, response);
     }
-
 }

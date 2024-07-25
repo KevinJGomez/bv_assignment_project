@@ -1,5 +1,6 @@
 package com.bv.assignment.leave_request_api.controller;
 
+import com.bv.assignment.leave_request_api.models.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -10,9 +11,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
-import com.bv.assignment.leave_request_api.models.LoginRequest;
-import com.bv.assignment.leave_request_api.models.LoginResponse;
-import com.bv.assignment.leave_request_api.models.RequestUser;
 import com.bv.assignment.leave_request_api.service.AuthService;
 
 import java.util.UUID;
@@ -91,16 +89,43 @@ public class AuthController {
 
         try {
             logger.info(uuid + " AuthController: register Method Called...Username: " + user.getUsername());
-            RequestUser newUser = authService.saveUser(uuid, user);
 
+                try {
+                    RequestUser.Role.valueOf(user.getRole().name());
+                } catch (IllegalArgumentException e) {
+                    return ResponseEntity.ok(new LoginResponse("1", "Failed", "Invalid role"));
+                }
+
+            RequestUser newUser = authService.saveUser(uuid, user);
             return ResponseEntity.ok(new LoginResponse("0", "Success", "User Created: " + newUser.getUsername()));
-        }catch(Exception e) {
-            logger.error(uuid + ": ERROR: AuthController Login: ");
+        } catch (Exception e) {
+            logger.error(uuid + ": ERROR: AuthController register: ");
             e.printStackTrace();
 
             return ResponseEntity.ok(new LoginResponse("1", "Failed", "Cannot Create User: " + user.getUsername()));
         }
+    }
 
+    /*
+     * Register Method for the Application
+     * @In Credentials
+     * @Out Confirmation
+     *
+     * */
+    @PostMapping("/verify")
+    public ReturnTokenValidity verifyUser(@RequestBody GetToken token) {
+        String uuid = UUID.randomUUID().toString().replaceAll("-", "") + " ";
+        ReturnTokenValidity checkToken = new ReturnTokenValidity();
+        try {
+            logger.info(uuid + " AuthController: verifyUser Method Called...Token: " + token);
+            checkToken = authService.validateToken(token.getToken());
+            return checkToken;
+        } catch (Exception e) {
+            logger.error(uuid + ": ERROR: AuthController verifyUser: ");
+            e.printStackTrace();
+            checkToken.setValidToken("false");
+            return checkToken;
+        }
     }
 }
 

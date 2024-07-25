@@ -22,6 +22,7 @@ public class JwtTokenUtil {
 
     public String generateToken(RequestUser requestUserDetails) {
         Map<String, Object> claims = new HashMap<>();
+        claims.put("role", requestUserDetails.getRole().name());
         return createToken(claims, requestUserDetails.getUsername());
     }
 
@@ -35,17 +36,21 @@ public class JwtTokenUtil {
                 .compact();
     }
 
-    public boolean validateToken(String token, UserDetails userDetails) {
+    public boolean validateToken(String token, RequestUser userDetails) {
         final String username = extractUsername(token);
         return (username.equals(userDetails.getUsername()) && !isTokenExpired(token));
     }
 
-    private boolean isTokenExpired(String token) {
+    public boolean isTokenExpired(String token) {
         return extractExpiration(token).before(new Date());
     }
 
     public String extractUsername(String token) {
         return extractClaim(token, Claims::getSubject);
+    }
+
+    public String extractRole(String token) {
+        return extractClaim(token, claims -> claims.get("role", String.class));
     }
 
     public Date extractExpiration(String token) {
@@ -60,4 +65,6 @@ public class JwtTokenUtil {
     private Claims extractAllClaims(String token) {
         return Jwts.parser().setSigningKey(secret).parseClaimsJws(token).getBody();
     }
+
+
 }
