@@ -10,8 +10,6 @@ export const routes: Routes = [
     { path: 'signup', component: SignUpComponent },
     { path: 'dashboard', component: MainDashboardComponent, children: [
         { path: '', component: LeaveRequestComponent },
-        // { path: 'leave-list', component: LeaveRequestListComponent },
-        // { path: '', redirectTo: 'request-leave', pathMatch: 'full' }
       ] },
       { path: '', redirectTo: '/login', pathMatch: 'full' },
       { path: '**', redirectTo: '/login' }
