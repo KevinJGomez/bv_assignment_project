@@ -31,6 +31,7 @@
 .custom-hr {
   border: 0.5px solid #b6d8ff; /* Darker gray color */
   opacity: 2; /* Ensures full color intensity */
+  margin-top: -1px;
 }
 
 @media (max-width: 768px) {

@@ -23,7 +23,6 @@ import lombok.extern.slf4j.Slf4j;
 
 @RestController
 @RequiredArgsConstructor
-@CrossOrigin("*")
 @Slf4j
 @RequestMapping("/api/auth")
 public class AuthController {

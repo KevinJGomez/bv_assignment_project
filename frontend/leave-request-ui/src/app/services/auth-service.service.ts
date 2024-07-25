@@ -9,8 +9,16 @@ import { Router } from '@angular/router';
 })
 export class AuthServiceService {
   api_auth_url: string = 'http://localhost:9090/api/auth/';
+  api_admin_url: string = 'http://localhost:9090/api/admin/';
 
   constructor(private http: HttpClient, private router: Router) {}
+
+  // const authOptions = {
+  //   headers: new HttpHeaders({
+  //     'Content-Type': 'application/json',
+  //     Authorization: 'Bearer ' + sessionStorage.getItem('access_token'),
+  //   }),
+  // };
 
   // user login
   login(data: any) {
@@ -62,5 +70,24 @@ export class AuthServiceService {
         return throwError(err);
       })
     );
+  }
+
+  // get all users
+  getUsers() {
+    const authOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        Authorization: 'Bearer ' + sessionStorage.getItem('__tk'),
+      }),
+    };
+    return this.http
+      .get<any>(this.api_admin_url + 'users', authOptions)
+      .toPromise()
+      .then((response: any) => {
+        return response;
+      })
+      .catch((error: any) => {
+        return throwError(error);
+      });
   }
 }

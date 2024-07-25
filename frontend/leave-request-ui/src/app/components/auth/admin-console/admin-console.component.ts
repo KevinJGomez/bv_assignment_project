@@ -22,6 +22,7 @@ export class AdminConsoleComponent implements OnInit{
   myForm!: FormGroup;
   sendData: any = {};
   constructor(private authService: AuthServiceService, private router: Router) {}
+  allusers: any = [];
 
   ngOnInit(): void {
     this.myForm = new FormGroup({
@@ -29,6 +30,20 @@ export class AdminConsoleComponent implements OnInit{
       password: new FormControl('', [Validators.required,Validators.minLength(6)]),
       role: new FormControl('', Validators.required) 
     });
+
+    this.getAllUsers();
+  }
+
+  getAllUsers(){
+    this.authService
+      .getUsers()
+      .then((data) => {
+        console.log(data);
+        this.allusers = data;
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }
 
   users = [
@@ -82,6 +97,7 @@ export class AdminConsoleComponent implements OnInit{
               timer: 1500
             }).then(() => {
               this.myForm.reset();
+              this.getAllUsers();
             });
           }
           

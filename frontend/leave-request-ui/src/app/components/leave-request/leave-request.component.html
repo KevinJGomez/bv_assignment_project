@@ -4,28 +4,29 @@
       <div class="card mb-3">
         <div class="card-body">
           <h5 class="card-title">Leave Request Form</h5>
-          <form (ngSubmit)="onSubmit()" #leaveForm="ngForm">
+          <form [formGroup]="leaveForm"
+          (ngSubmit)="onSubmit()">
             <div class="form-row">
               <div class="form-group col-md-3">
                 <label for="leaveType">Leave Type</label>
-                <select class="form-control" id="leaveType" required [(ngModel)]="leaveRequest.leaveType" name="leaveType">
+                <select class="form-control" id="leaveType" formControlName="leaveType" required>
                   <option value="" disabled selected>Select leave type</option>
-                  <option value="sick">Sick Leave</option>
-                  <option value="vacation">Vacation</option>
-                  <option value="personal">Personal Leave</option>
+                  <option value="Sick">Sick Leave</option>
+                  <option value="Annual">Annual Leave</option>
+                  <option value="Casual">Casual Leave</option>
                 </select>
               </div>
               <div class="form-group col-md-3">
                 <label for="startDate">Start Date</label>
-                <input type="date" class="form-control" id="startDate" required [(ngModel)]="leaveRequest.startDate" name="startDate">
+                <input type="date" class="form-control" id="startDate" formControlName="startDate" required>
               </div>
               <div class="form-group col-md-3">
                 <label for="endDate">End Date</label>
-                <input type="date" class="form-control" id="endDate" required [(ngModel)]="leaveRequest.endDate" name="endDate">
+                <input type="date" class="form-control" id="endDate" formControlName="endDate" required>
               </div>
               <div class="form-group col-md-3">
                 <label for="reason">Reason for Leave</label>
-                <textarea class="form-control" id="reason" rows="1" required [(ngModel)]="leaveRequest.reason" name="reason"></textarea>
+                <textarea class="form-control" id="reason" rows="2" formControlName="reason" required></textarea>
               </div>
             </div>
             <button type="submit" class="btn btn-primary mt-4">Apply Leave</button>
