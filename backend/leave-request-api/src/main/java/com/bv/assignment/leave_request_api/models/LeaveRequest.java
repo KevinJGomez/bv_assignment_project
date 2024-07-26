@@ -1,19 +1,11 @@
 package com.bv.assignment.leave_request_api.models;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 import lombok.Getter;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 
-import java.sql.Date;
 import java.time.LocalDate;
 
 @Entity
@@ -27,8 +19,9 @@ public class LeaveRequest {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
-    private String userId;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id", nullable = false)
+    private RequestUser user;
 
     @Column(nullable = false)
     private String leaveType;
@@ -42,4 +35,3 @@ public class LeaveRequest {
     @Column(nullable = false)
     private String reason;
 }
-

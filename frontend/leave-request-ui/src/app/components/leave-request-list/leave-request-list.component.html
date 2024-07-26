@@ -1,4 +1,4 @@
-<div class="container-fluid mt-2 leave-request-list-container">
+<!-- <div class="container-fluid mt-2 leave-request-list-container">
   <div class="row">
     <div class="col-12">
       <div class="card mb-3">
@@ -29,4 +29,44 @@
     (delete)="deleteRequest($event)"
     (close)="showModal = false">
   </app-leave-request-modal>
+</div> -->
+
+<div class="container-fluid mt-2 leave-request-list-container">
+  <div class="row">
+    <div class="col-12">
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">Leave Requests</h5>
+          <div class="row">
+            <div *ngFor="let request of allRequests" class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
+              <div class="leave-request-item" (click)="viewRequest(request.id)">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <strong>{{ request.leaveType }}</strong>
+                    <p class="mb-1">From: {{ request.startDate | date: 'longDate' }}</p>
+                    <p class="mb-1">To: {{ request.endDate | date: 'longDate' }}</p>
+                    <p class="mb-0">Reason: {{ request.reason }}</p>
+                  </div>
+                  <div class="arrow-icon">
+                    &#8250;
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <app-leave-request-modal
+    *ngIf="showModal"
+    [show]="showModal"
+    [leaveRequestId]="selectedRequest"
+    (update)="updateRequest($event)"
+    (delete)="deleteRequest($event)"
+    (close)="closeRequest($event)">
+  </app-leave-request-modal>
 </div>
+
+

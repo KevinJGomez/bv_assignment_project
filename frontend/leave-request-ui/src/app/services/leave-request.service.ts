@@ -48,4 +48,40 @@ export class LeaveRequestService {
         return throwError(error);
       });
   }
+
+  // update request
+  updateRequest(data: any) {
+    const authOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        Authorization: 'Bearer ' + sessionStorage.getItem('__tk'),
+      }),
+    };
+    return this.http.put(this.api_leave_url, data, authOptions).pipe(
+      map((val) => {
+        return val;
+      }),
+      catchError((err) => {
+        return throwError(err);
+      })
+    );
+  }
+
+  // delete request
+  deleteRequest(data: any) {
+    const authOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        Authorization: 'Bearer ' + sessionStorage.getItem('__tk'),
+      }),
+    };
+    return this.http.delete(this.api_leave_url+'/'+data, authOptions).pipe(
+      map((val) => {
+        return val;
+      }),
+      catchError((err) => {
+        return throwError(err);
+      })
+    );
+  }
 }

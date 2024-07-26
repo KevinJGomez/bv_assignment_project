@@ -10,6 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class LeaveRequestService {
 
@@ -25,5 +27,13 @@ public class LeaveRequestService {
             e.printStackTrace();
             return null;
         }
+    }
+
+    public Optional<LeaveRequest> findById(Long id) {
+        return leaveRepository.findById(id);
+    }
+
+    public void deleteLeaveRequest(Long id) {
+        leaveRepository.deleteById(id);
     }
 }
