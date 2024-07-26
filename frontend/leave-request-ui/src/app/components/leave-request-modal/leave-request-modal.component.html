@@ -61,11 +61,14 @@
           </div>
           <div class="form-group">
             <label for="startDate">Start Date</label>
-            <input type="date" class="form-control" id="startDate" required name="startDate" [(ngModel)]="leaveRequest.startDate">
+            <input type="date" class="form-control" id="startDate" required name="startDate" [(ngModel)]="leaveRequest.startDate" [attr.min]="today" (change)="validateDates()">
           </div>
           <div class="form-group">
             <label for="endDate">End Date</label>
-            <input type="date" class="form-control" id="endDate" required name="endDate" [(ngModel)]="leaveRequest.endDate">
+            <input type="date" class="form-control" id="endDate" required name="endDate" [(ngModel)]="leaveRequest.endDate" [attr.min]="today" (change)="validateDates()">
+            <small *ngIf="dateMismatch" class="form-text text-danger">
+              Start Date must be before End Date.
+            </small>
           </div>
           <div class="form-group">
             <label for="reason">Reason for Leave</label>

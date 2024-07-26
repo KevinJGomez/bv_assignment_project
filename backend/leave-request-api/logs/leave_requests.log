@@ -5141,3 +5141,24 @@ com.fasterxml.jackson.databind.exc.InvalidDefinitionException: No serializer fou
 15:59:41.596 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 15:59:41.596 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 15:59:41.596 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+19:51:27.986 [main] INFO  c.b.a.l.LeaveRequestApiApplication - Starting LeaveRequestApiApplication using Java 17.0.10 on KEVIN-GOMEZ-HP with PID 13080 (D:\Work\BV\bv_assignment_project\backend\leave-request-api\target\classes started by KevinGomez in D:\Work\BV\bv_assignment_project\backend\leave-request-api)
+19:51:27.988 [main] INFO  c.b.a.l.LeaveRequestApiApplication - No active profile set, falling back to 1 default profile: "default"
+19:51:28.839 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+19:51:28.917 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 47 ms. Found 2 JPA repository interfaces.
+19:51:29.738 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9090 (http)
+19:51:29.854 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1828 ms
+19:51:29.924 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+19:51:30.114 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+19:51:30.162 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.10.Final
+19:51:30.333 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+19:51:30.412 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+19:51:30.740 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+19:51:30.771 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+19:51:31.350 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+19:51:31.366 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+19:51:32.226 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@69dc7b24, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@297454f7, org.springframework.security.web.context.SecurityContextPersistenceFilter@59aba3c3, org.springframework.security.web.header.HeaderWriterFilter@662d3e85, org.springframework.web.filter.CorsFilter@23d060c2, org.springframework.security.web.authentication.logout.LogoutFilter@162e29a1, com.bv.assignment.leave_request_api.config.JwtTokenFilter@602b7944, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@236a3e4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@56d6e2e1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5f8d4b51, org.springframework.security.web.session.SessionManagementFilter@5cc87de4, org.springframework.security.web.access.ExceptionTranslationFilter@4b62f1ba, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@69d1ad64]
+19:51:32.679 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9090 (http) with context path ''
+19:51:32.694 [main] INFO  c.b.a.l.LeaveRequestApiApplication - Started LeaveRequestApiApplication in 5.039 seconds (JVM running for 5.702)
+19:51:32.711 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+19:51:32.727 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+19:51:32.743 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

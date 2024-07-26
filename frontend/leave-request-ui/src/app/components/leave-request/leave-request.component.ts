@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import { catchError, map, first } from 'rxjs/operators';
 import { FormGroup, Validators, AbstractControl, FormBuilder,FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ValidatorFn } from '@angular/forms';
 
 @Component({
   selector: 'app-leave-request',
@@ -17,26 +18,40 @@ import { Router } from '@angular/router';
 export class LeaveRequestComponent implements OnInit{
   leaveForm!: FormGroup;
   sendData: any = {};
+  today!: string;
 
   constructor(private fb: FormBuilder, private leaveRequestService: LeaveRequestService, private router: Router) {}
 
   ngOnInit(): void {
-    this.leaveForm = new FormGroup({
+    this.leaveForm = this.fb.group({
       leaveType: new FormControl('', Validators.required),
       startDate: new FormControl('', Validators.required),
       endDate: new FormControl('', Validators.required),
       reason: new FormControl('', Validators.required),
-    });
+    },{ validator: this.dateLessThan('startDate', 'endDate')});
+    const todayDate = new Date();
+    this.today = todayDate.toISOString().split('T')[0];
   }
 
   onSubmit() {
     if (this.leaveForm.status === 'INVALID') {
-      Swal.fire({
-        icon: 'error',
-        title: 'Invalid Submission',
-        text: 'Provide Leave Information to Apply!',
-      });
-    } else {
+      if(this.leaveForm.errors?.['dateMismatch']){
+        Swal.fire({
+          icon: 'error',
+          title: 'Invalid Date Selection!',
+          text: 'Start date should be before the end date!',
+        });
+      }
+      else{
+        Swal.fire({
+          icon: 'error',
+          title: 'Invalid Submission',
+          text: 'Provide Leave Information to Apply!',
+        });
+      }
+      
+    } 
+    else {
       this.sendData = {
         leaveType: this.leaveForm.controls['leaveType'].value,
         startDate: this.leaveForm.controls['startDate'].value,
@@ -76,5 +91,16 @@ export class LeaveRequestComponent implements OnInit{
 
   resetForm(){
     this.leaveForm.reset();
+  }
+
+  dateLessThan(startDateField: string, endDateField: string): ValidatorFn {
+    return (formGroup: AbstractControl): { [key: string]: any } | null => {
+      const startDate = formGroup.get(startDateField)?.value;
+      const endDate = formGroup.get(endDateField)?.value;
+      if (startDate && endDate && startDate > endDate) {
+        return { dateMismatch: true };
+      }
+      return null;
+    };
   }
 }

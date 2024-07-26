@@ -29,11 +29,15 @@ export class LeaveRequestModalComponent implements OnInit{
     userId: 0
   };
   sendData: any = {};
+  today!: string;
+  dateMismatch: boolean = false;
 
   constructor(private cdr: ChangeDetectorRef, private leaveRequestService: LeaveRequestService) {}
 
   ngOnInit() {
     this.getAllRequests();
+    const todayDate = new Date();
+    this.today = todayDate.toISOString().split('T')[0];
   }
 
   closeModal() {
@@ -53,6 +57,13 @@ export class LeaveRequestModalComponent implements OnInit{
         icon: 'error',
         title: 'Invalid Leave Update!',
         text: 'Provide All Required Fields!',
+      });
+    }
+    else if(this.dateMismatch){
+      Swal.fire({
+        icon: 'error',
+        title: 'Invalid Date Selection!',
+        text: 'Start date should be before the end date!',
       });
     }
     else{
@@ -162,6 +173,14 @@ export class LeaveRequestModalComponent implements OnInit{
         this.leaveRequest.reason = data[i].reason;
 
       }
+    }
+  }
+
+  validateDates(): void {
+    if (this.leaveRequest.startDate && this.leaveRequest.endDate) {
+      this.dateMismatch = this.leaveRequest.startDate > this.leaveRequest.endDate;
+    } else {
+      this.dateMismatch = false;
     }
   }
 }
