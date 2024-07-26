@@ -25,6 +25,10 @@ public class JwtTokenUtil {
     @Value("${jwt.secret}")
     private String secret;
 
+    public void setSecret(String secret){
+        this.secret = secret;
+    }
+
     public String generateToken(RequestUser requestUserDetails) {
         logger.info("JwtTokenUtil | Generating token for user: {}", requestUserDetails.getUsername());
         Map<String, Object> claims = new HashMap<>();

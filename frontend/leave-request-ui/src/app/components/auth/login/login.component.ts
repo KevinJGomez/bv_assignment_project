@@ -65,7 +65,7 @@ export class LoginComponent implements OnInit{
               showConfirmButton: false,
               timer: 1500
             }).then(() => {
-              sessionStorage.setItem("__tk", data.data)
+              this.authService.setToken(data.data);
               this.router.navigate(['dashboard']);
             });
           }
