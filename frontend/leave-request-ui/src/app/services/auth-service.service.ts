@@ -49,7 +49,6 @@ export class AuthServiceService {
         return val;
       }),
       catchError((err) => {
-        console.log(err);
         return throwError(err);
       })
     );

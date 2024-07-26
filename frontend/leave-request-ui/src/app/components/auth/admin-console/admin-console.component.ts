@@ -38,11 +38,9 @@ export class AdminConsoleComponent implements OnInit{
     this.authService
       .getUsers()
       .then((data) => {
-        console.log(data);
         this.allusers = data;
       })
       .catch((err) => {
-        console.log(err);
       });
   }
 

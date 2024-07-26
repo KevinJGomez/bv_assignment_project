@@ -24,11 +24,9 @@ export class LeaveRequestListComponent implements OnInit{
     this.leaveRequestService
       .getRequests()
       .then((data) => {
-        // console.log(data);
         this.allRequests = data;
       })
       .catch((err) => {
-        console.log(err);
       });
   }
   

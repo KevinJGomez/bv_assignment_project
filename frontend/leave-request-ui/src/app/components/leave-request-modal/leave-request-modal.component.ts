@@ -146,12 +146,10 @@ export class LeaveRequestModalComponent implements OnInit{
     this.leaveRequestService
       .getRequests()
       .then((data) => {
-        // console.log(data);
         this.allRequests = data;
         this.filterRequest(data)
       })
       .catch((err) => {
-        console.log(err);
       });
   }
 

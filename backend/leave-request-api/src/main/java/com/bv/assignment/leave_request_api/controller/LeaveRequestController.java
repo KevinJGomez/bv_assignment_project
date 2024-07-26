@@ -33,113 +33,156 @@ public class LeaveRequestController {
     @Autowired
     private AuthService authService;
 
-    @Autowired
-    private LeaveRepository leaveRepository;
 
-    @Autowired
-    private UserRepository userRepository;
     /*
      * Save API for Leave Requests
      * @In Leave Request
-     * @Out ResponseEntity
+     * @Out Confirmation
      *
      * */
     @PostMapping("/leave-requests")
     public ResponseEntity<?> saveLeaveRequest(@RequestBody LeaveRequest data, HttpServletRequest request) {
         String uuid = UUID.randomUUID().toString().replaceAll("-", "") + " ";
-
+        logger.info(uuid + " LeaveRequestController | saveLeaveRequest Initiated.......");
         try {
-            String token = extractTokenFromRequest(request);
+            String token = extractTokenFromRequest(uuid, request);
             String username = authService.getUsernameFromToken(token);
-            Long getUserId = userRepository.findUserIdByUsername(username);
-            RequestUser user = userRepository.findById(getUserId).orElseThrow(() -> new RuntimeException("User not found"));
+            Long getUserId = leaveRequestService.findUserIdByUsername(uuid, username);
+            RequestUser user = leaveRequestService.findUserById(uuid, getUserId);
             data.setUser(user);
-            LeaveRequest leaveRequest = leaveRequestService.saveLeaveRequest(data);
+
+            logger.info(uuid + " LeaveRequestController | saveLeaveRequest -> Calling Service Method.......");
+            LeaveRequest leaveRequest = leaveRequestService.saveLeaveRequest(uuid, data);
             return ResponseEntity.ok(new LoginResponse("0", "Success", "Leave Applied: " + leaveRequest.getLeaveType()));
         } catch (Exception e) {
+            logger.info(uuid + " LeaveRequestController | saveLeaveRequest Failed.......Error: " + e.getMessage());
             e.printStackTrace();
             return ResponseEntity.ok(new LoginResponse("1", "Failed", null));
         }
     }
 
+    /*
+     * Get All Requests as per the userId
+     * @In Token
+     * @Out Confirmation
+     *
+     * */
     @GetMapping("/leave-requests")
     public List<LeaveRequest> getLeaves(HttpServletRequest request) {
         String uuid = UUID.randomUUID().toString().replaceAll("-", "") + " ";
+        logger.info(uuid + " LeaveRequestController | getLeaves Initiated.......");
         try {
-            String token = extractTokenFromRequest(request);
+            String token = extractTokenFromRequest(uuid, request);
             String username = authService.getUsernameFromToken(token);
-            Long getUserId = userRepository.findUserIdByUsername(username);
-            RequestUser user = userRepository.findById(getUserId).orElseThrow(() -> new RuntimeException("User not found"));
-            return leaveRepository.findByUser(user);
+            Long getUserId = leaveRequestService.findUserIdByUsername(uuid, username);
+            RequestUser user = leaveRequestService.findUserById(uuid, getUserId);
+
+            logger.info(uuid + " LeaveRequestController | getLeaves -> Calling Service Method.......");
+            return leaveRequestService.getLeavesByUser(uuid, user);
+
         } catch (Exception e) {
+            logger.info(uuid + " LeaveRequestController | getLeaves -> getLeaves failed!.......Error: " + e.getMessage());
             e.printStackTrace();
             return null;
         }
     }
 
+    /*
+     * Modifying the existing request
+     * @In Leave Request
+     * @Out Confirmation
+     *
+     * */
     @PutMapping("/leave-requests")
     public ResponseEntity<?> updateLeaveRequest(@RequestBody LeaveRequest data, HttpServletRequest request) {
+        String uuid = UUID.randomUUID().toString().replaceAll("-", "") + " ";
+        logger.info(uuid + " LeaveRequestController | updateLeaveRequest Initiated.......");
         try {
-            // Extract the token and get the username
-            String token = extractTokenFromRequest(request);
-            String username = authService.getUsernameFromToken(token);
-            Long getUserId = userRepository.findUserIdByUsername(username);
-            RequestUser user = userRepository.findById(getUserId).orElseThrow(() -> new RuntimeException("User not found"));
+            String token = extractTokenFromRequest(uuid, request);
 
-            // Find the existing leave request
-            LeaveRequest existingLeaveRequest = leaveRequestService.findById(data.getId())
+            logger.info(uuid + " LeaveRequestController | updateLeaveRequest -> Calling user service.......");
+            String username = authService.getUsernameFromToken(token);
+
+            logger.info(uuid + " LeaveRequestController | updateLeaveRequest -> Calling service methods.......");
+            Long getUserId = leaveRequestService.findUserIdByUsername(uuid, username);
+            RequestUser user = leaveRequestService.findUserById(uuid, getUserId);
+
+            LeaveRequest existingLeaveRequest = leaveRequestService.findById(uuid, data.getId())
                     .orElseThrow(() -> new RuntimeException("Leave request not found"));
 
-            // Check if the user owns the leave request
             if (!existingLeaveRequest.getUser().getId().equals(user.getId())) {
                 return  ResponseEntity.ok(new LoginResponse("0", "Success", "Cannot Find the Leave Application"));
             }
 
-            // Update the leave request details
             existingLeaveRequest.setLeaveType(data.getLeaveType());
             existingLeaveRequest.setStartDate(data.getStartDate());
             existingLeaveRequest.setEndDate(data.getEndDate());
             existingLeaveRequest.setReason(data.getReason());
 
-            // Save the updated leave request
-            LeaveRequest updatedLeaveRequest = leaveRequestService.saveLeaveRequest(existingLeaveRequest);
+            logger.info(uuid + " LeaveRequestController | updateLeaveRequest -> Calling saving service method.......");
+            LeaveRequest updatedLeaveRequest = leaveRequestService.saveLeaveRequest(uuid, existingLeaveRequest);
 
             return ResponseEntity.ok(new LoginResponse("0", "Success", "Leave Request Updated: " + updatedLeaveRequest.getLeaveType()));
         } catch (Exception e) {
+            logger.info(uuid + " LeaveRequestController | updateLeaveRequest Failed.......Error: " + e.getMessage());
             e.printStackTrace();
             return ResponseEntity.ok(new LoginResponse("1", "Failed", null));
         }
     }
 
+    /*
+     * Delete a specific request
+     * @In Request ID
+     * @Out Confirmation
+     *
+     * */
     @DeleteMapping("/leave-requests/{id}")
     public ResponseEntity<?> deleteLeaveRequest(@PathVariable Long id, HttpServletRequest request) {
+        String uuid = UUID.randomUUID().toString().replaceAll("-", "") + " ";
+
+        logger.info(uuid + " LeaveRequestController | deleteLeaveRequest Initiated.......");
         try {
-            String token = extractTokenFromRequest(request);
+            String token = extractTokenFromRequest(uuid, request);
+
+            logger.info(uuid + " LeaveRequestController | deleteLeaveRequest -> Calling user service.......");
             String username = authService.getUsernameFromToken(token);
-            Long getUserId = userRepository.findUserIdByUsername(username);
-            RequestUser user = userRepository.findById(getUserId).orElseThrow(() -> new RuntimeException("User not found"));
 
-            LeaveRequest existingLeaveRequest = leaveRequestService.findById(id)
+            logger.info(uuid + " LeaveRequestController | deleteLeaveRequest -> Calling leave service methods.......");
+            Long getUserId = leaveRequestService.findUserIdByUsername(uuid, username);
+            RequestUser user = leaveRequestService.findUserById(uuid, getUserId);
+            LeaveRequest existingLeaveRequest = leaveRequestService.findById(uuid, id)
                     .orElseThrow(() -> new RuntimeException("Leave request not found"));
-
             if (!existingLeaveRequest.getUser().getId().equals(user.getId())) {
                 return  ResponseEntity.ok(new LoginResponse("0", "Success", "You can delete your own leave application only!"));
             }
 
-            leaveRequestService.deleteLeaveRequest(id);
+            logger.info(uuid + " LeaveRequestController | deleteLeaveRequest -> Calling leave delete service method.......");
+            leaveRequestService.deleteLeaveRequest(uuid, id);
 
             return ResponseEntity.ok(new LoginResponse("0", "Success", "Leave Request Deleted"));
         } catch (Exception e) {
+            logger.info(uuid + " LeaveRequestController | deleteLeaveRequest Failed.......Error: " + e.getMessage());
             e.printStackTrace();
             return ResponseEntity.ok(new LoginResponse("1", "Failed", null));
         }
     }
 
-    private String extractTokenFromRequest(HttpServletRequest request) {
-        String bearerToken = request.getHeader("Authorization");
-        if (bearerToken != null && bearerToken.startsWith("Bearer ")) {
-            return bearerToken.substring(7);
+    private String extractTokenFromRequest(String uuid, HttpServletRequest request) {
+        logger.info(uuid + " LeaveRequestController | extractTokenFromRequest initiated.......");
+        try{
+            String bearerToken = request.getHeader("Authorization");
+            if (bearerToken != null && bearerToken.startsWith("Bearer ")) {
+                logger.info(uuid + " LeaveRequestController | Token Extraction Success!.......");
+                return bearerToken.substring(7);
+            }
+            else{
+                logger.info(uuid + " LeaveRequestController | Token Extraction was not Success!.......");
+                return null;
+            }
+        }catch(Exception e){
+            logger.info(uuid + " LeaveRequestController | Token Extraction Failed.......Error: " + e.getMessage());
+            e.printStackTrace();
+            return null;
         }
-        return null;
     }
 }

@@ -73,4 +73,8 @@ export class LeaveRequestComponent implements OnInit{
         });
     }
   }
+
+  resetForm(){
+    this.leaveForm.reset();
+  }
 }

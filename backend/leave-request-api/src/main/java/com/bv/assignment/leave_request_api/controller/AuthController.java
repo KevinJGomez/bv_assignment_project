@@ -4,7 +4,6 @@ import com.bv.assignment.leave_request_api.models.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -36,7 +35,7 @@ public class AuthController {
     private AuthService authService;
 
     /*
-     * Login Method for the Application
+     * User Login Method for the Application
      * @In Credentials
      * @Out Auth Token
      *
@@ -46,7 +45,7 @@ public class AuthController {
         String uuid = UUID.randomUUID().toString().replaceAll("-", "") + " ";
 
         try {
-            logger.info(uuid + " AuthController: Login Method Called...Username: " + request.getUsername());
+            logger.info(uuid + " AuthController: Login Method Initiated...Username: " + request.getUsername());
 
             RequestUser user = authService.findByUsername(uuid, request.getUsername());
             if (user == null) {
@@ -68,16 +67,15 @@ public class AuthController {
             }
 
         }catch(Exception e) {
-            logger.error(uuid + ": ERROR: AuthController Login: ");
+            logger.error(uuid + ": ERROR: AuthController Login: " + e.getMessage());
             e.printStackTrace();
-
             return ResponseEntity.ok(new LoginResponse("1", "Failed", ""));
         }
 
     }
 
     /*
-     * Register Method for the Application
+     * User Register Method for the Application
      * @In Credentials
      * @Out Confirmation
      *
@@ -87,8 +85,7 @@ public class AuthController {
         String uuid = UUID.randomUUID().toString().replaceAll("-", "") + " ";
 
         try {
-            logger.info(uuid + " AuthController: register Method Called...Username: " + user.getUsername());
-
+            logger.info(uuid + " AuthController: register Method initiated...Username: " + user.getUsername());
                 try {
                     RequestUser.Role.valueOf(user.getRole().name());
                 } catch (IllegalArgumentException e) {
@@ -98,16 +95,15 @@ public class AuthController {
             RequestUser newUser = authService.saveUser(uuid, user);
             return ResponseEntity.ok(new LoginResponse("0", "Success", "User Created: " + newUser.getUsername()));
         } catch (Exception e) {
-            logger.error(uuid + ": ERROR: AuthController register: ");
+            logger.error(uuid + ": ERROR: AuthController register: " + e.getMessage());
             e.printStackTrace();
-
             return ResponseEntity.ok(new LoginResponse("1", "Failed", "Cannot Create User: " + user.getUsername()));
         }
     }
 
     /*
-     * Register Method for the Application
-     * @In Credentials
+     * User Verification Method for the Application
+     * @In Auth Token
      * @Out Confirmation
      *
      * */
@@ -116,11 +112,11 @@ public class AuthController {
         String uuid = UUID.randomUUID().toString().replaceAll("-", "") + " ";
         ReturnTokenValidity checkToken = new ReturnTokenValidity();
         try {
-            logger.info(uuid + " AuthController: verifyUser Method Called...Token: " + token);
-            checkToken = authService.validateToken(token.getToken());
+            logger.info(uuid + " AuthController: verifyUser Method initiated...Token: " + token);
+            checkToken = authService.validateToken(uuid, token.getToken());
             return checkToken;
         } catch (Exception e) {
-            logger.error(uuid + ": ERROR: AuthController verifyUser: ");
+            logger.error(uuid + ": ERROR: AuthController verifyUser: " + e.getMessage());
             e.printStackTrace();
             checkToken.setValidToken("false");
             return checkToken;
