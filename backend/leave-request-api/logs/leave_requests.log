@@ -3735,3 +3735,282 @@ com.fasterxml.jackson.databind.exc.InvalidDefinitionException: No serializer fou
 09:48:47.306 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 09:48:47.312 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 09:48:47.320 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+10:46:14.346 [main] INFO  c.b.a.l.LeaveRequestApiApplication - Starting LeaveRequestApiApplication using Java 17.0.10 on KEVIN-GOMEZ-HP with PID 20352 (D:\Work\BV\bv_assignment_project\backend\leave-request-api\target\classes started by KevinGomez in D:\Work\BV\bv_assignment_project\backend\leave-request-api)
+10:46:14.346 [main] INFO  c.b.a.l.LeaveRequestApiApplication - No active profile set, falling back to 1 default profile: "default"
+10:46:15.095 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+10:46:15.158 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 51 ms. Found 2 JPA repository interfaces.
+10:46:15.880 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9090 (http)
+10:46:15.895 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9090"]
+10:46:15.895 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+10:46:15.895 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+10:46:16.021 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+10:46:16.021 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1617 ms
+10:46:16.068 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+10:46:16.225 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+10:46:16.304 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.10.Final
+10:46:16.476 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+10:46:16.555 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+10:46:16.868 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+10:46:16.884 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+10:46:17.511 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+10:46:17.511 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+10:46:18.202 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@630febd7, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@45c2c396, org.springframework.security.web.context.SecurityContextPersistenceFilter@1a5a4f8, org.springframework.security.web.header.HeaderWriterFilter@6bdad3bb, org.springframework.web.filter.CorsFilter@98712fa, org.springframework.security.web.authentication.logout.LogoutFilter@66779435, com.bv.assignment.leave_request_api.config.JwtTokenFilter@408d12fc, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@174f0d06, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4693d24f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@69d61a6f, org.springframework.security.web.session.SessionManagementFilter@1a390b8c, org.springframework.security.web.access.ExceptionTranslationFilter@337fb1a5, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6f740044]
+10:46:18.485 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9090"]
+10:46:18.516 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9090 (http) with context path ''
+10:46:18.516 [main] INFO  c.b.a.l.LeaveRequestApiApplication - Started LeaveRequestApiApplication in 4.528 seconds (JVM running for 5.054)
+10:47:14.764 [http-nio-9090-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+10:47:14.764 [http-nio-9090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+10:47:14.764 [http-nio-9090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+10:47:14.843 [http-nio-9090-exec-2] INFO  c.b.a.l.controller.AuthController - 956d148af72e4805af9c22359b8a6385  AuthController: Login Method Called...Username: jude
+10:47:14.847 [http-nio-9090-exec-2] INFO  c.b.a.l.service.AuthService - 956d148af72e4805af9c22359b8a6385  AuthService: findByUsername Method Called...Username: jude
+10:47:16.505 [http-nio-9090-exec-4] INFO  c.b.a.l.controller.AuthController - 3d8e7ebf41c9410fa70ef38afaaea67e  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@3bb3e858
+10:47:16.517 [http-nio-9090-exec-4] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+10:47:19.349 [http-nio-9090-exec-5] INFO  c.b.a.l.controller.AuthController - 0bcdd1f737494f7ca05ff27a4c701a7b  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@3cae84a6
+10:47:19.350 [http-nio-9090-exec-5] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+10:47:19.970 [http-nio-9090-exec-6] INFO  c.b.a.l.controller.AuthController - 6c280d1512fa4dd19ef6a4c00eb97d7e  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@14508c7d
+10:47:19.971 [http-nio-9090-exec-6] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+10:47:20.934 [http-nio-9090-exec-8] INFO  c.b.a.l.controller.AuthController - a32f072326b14f4186f0f16a71534653  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@5d8dc173
+10:47:20.936 [http-nio-9090-exec-8] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+10:50:51.032 [http-nio-9090-exec-3] INFO  c.b.a.l.controller.AuthController - 81209afdb9934eca9941dab3a46079a4  AuthController: Login Method Called...Username: jude
+10:50:51.032 [http-nio-9090-exec-3] INFO  c.b.a.l.service.AuthService - 81209afdb9934eca9941dab3a46079a4  AuthService: findByUsername Method Called...Username: jude
+10:50:52.626 [http-nio-9090-exec-5] INFO  c.b.a.l.controller.AuthController - 74f82878ccf547a2a6a07a1a5054b4b8  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@426d3754
+10:50:52.627 [http-nio-9090-exec-5] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+10:50:55.543 [http-nio-9090-exec-7] INFO  c.b.a.l.controller.AuthController - fac474c847804641a6997a769f435f59  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@de34674
+10:50:55.543 [http-nio-9090-exec-7] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+10:50:56.979 [http-nio-9090-exec-10] INFO  c.b.a.l.controller.AuthController - 06fdd1bbc3db48d4a1de6cbd7c7b3be6  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@69581566
+10:50:56.979 [http-nio-9090-exec-10] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+10:50:57.780 [http-nio-9090-exec-2] INFO  c.b.a.l.controller.AuthController - 8b3fbc3fec9642e9b1d5a0316bd0732e  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@29a60eef
+10:50:57.780 [http-nio-9090-exec-2] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+10:55:44.703 [http-nio-9090-exec-6] INFO  c.b.a.l.controller.AuthController - ef7ad7cf857a4928a0ea97f6cd6e0079  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@4edfc1c8
+10:55:44.703 [http-nio-9090-exec-6] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+10:56:48.152 [http-nio-9090-exec-10] INFO  c.b.a.l.controller.AuthController - c94a3860d1cb45b9ba11dda9a822e4dc  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@37281b6
+10:56:48.161 [http-nio-9090-exec-10] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+10:56:52.457 [http-nio-9090-exec-1] INFO  c.b.a.l.controller.AuthController - de36d4d759c54ddeacb838e2d6de7eb2  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@5851bd34
+10:56:52.458 [http-nio-9090-exec-1] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+10:56:57.080 [http-nio-9090-exec-6] INFO  c.b.a.l.controller.AuthController - 27ba966bedec4c82a5297e5b2cbdffa5  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@20983f5
+10:56:57.080 [http-nio-9090-exec-6] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+10:59:28.610 [http-nio-9090-exec-9] INFO  c.b.a.l.controller.AuthController - 8d7f1d7d17714653a7157ce8dde7803f  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@24be61c2
+10:59:28.610 [http-nio-9090-exec-9] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:00:29.102 [http-nio-9090-exec-1] INFO  c.b.a.l.controller.AuthController - 9cad0c86791546a59e3a446cd1cc2bfb  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@1b2cdf99
+11:00:29.102 [http-nio-9090-exec-1] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:00:30.417 [http-nio-9090-exec-5] INFO  c.b.a.l.controller.AuthController - c8cd3524ceac4e59a0829a3a1d3a8618  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@183ed03f
+11:00:30.417 [http-nio-9090-exec-5] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:00:32.171 [http-nio-9090-exec-8] INFO  c.b.a.l.controller.AuthController - 8d621ce73d46494eb9571ddda5ea5b92  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@509b1f37
+11:00:32.171 [http-nio-9090-exec-8] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:00:34.829 [http-nio-9090-exec-9] INFO  c.b.a.l.controller.AuthController - 5b06a4f38b0e407d9544cb6abb30eaf2  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@5a65c9d7
+11:00:34.829 [http-nio-9090-exec-9] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:03:34.221 [http-nio-9090-exec-5] INFO  c.b.a.l.controller.AuthController - da8b071c34b942b0b84a3272051a4751  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@76aabc9d
+11:03:34.221 [http-nio-9090-exec-5] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:03:37.718 [http-nio-9090-exec-8] INFO  c.b.a.l.controller.AuthController - 7c32ea4285eb4a9fb3a7802eb353bb32  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@78552580
+11:03:37.718 [http-nio-9090-exec-8] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:03:38.900 [http-nio-9090-exec-9] INFO  c.b.a.l.controller.AuthController - 85c2f50becd642bb8105398e82b7905d  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@5f6cf5d1
+11:03:38.900 [http-nio-9090-exec-9] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:03:41.391 [http-nio-9090-exec-1] INFO  c.b.a.l.controller.AuthController - c149bdb84e7540a49b13182502ead86b  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@1ae2ed48
+11:03:41.391 [http-nio-9090-exec-1] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:06:55.151 [http-nio-9090-exec-6] INFO  c.b.a.l.controller.AuthController - 47eb2963461444f18b851ff64ef5a88c  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@477bb30e
+11:06:55.154 [http-nio-9090-exec-6] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:06:58.309 [http-nio-9090-exec-9] INFO  c.b.a.l.controller.AuthController - 498456bddd104c2998b2b763311727a5  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@1afc1471
+11:06:58.309 [http-nio-9090-exec-9] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:07:04.254 [http-nio-9090-exec-4] INFO  c.b.a.l.controller.AuthController - 69cba7d937f24f3b98af9165f9ad1ea5  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@30ebb527
+11:07:04.256 [http-nio-9090-exec-4] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:07:12.393 [http-nio-9090-exec-10] INFO  c.b.a.l.controller.AuthController - 3e25d81a4d304051a6e8f43b34dd848a  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@4486c9db
+11:07:12.395 [http-nio-9090-exec-10] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:08:32.191 [http-nio-9090-exec-4] INFO  c.b.a.l.controller.AuthController - be26dcb5a846412d81571fec75203490  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@449410a0
+11:08:32.193 [http-nio-9090-exec-4] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:08:52.777 [http-nio-9090-exec-8] INFO  c.b.a.l.controller.AuthController - 592ce5fe08b240d5a1bac1c93a2ba133  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@e735286
+11:08:52.779 [http-nio-9090-exec-8] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:08:55.798 [http-nio-9090-exec-2] INFO  c.b.a.l.controller.AuthController - 9f952f7b766a4857a248b8cf84bfc0cf  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@2562f1be
+11:08:55.801 [http-nio-9090-exec-2] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:09:05.908 [http-nio-9090-exec-5] INFO  c.b.a.l.controller.AuthController - 1bd5fe1618384e6e9c3e5643769ca36d  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@51646910
+11:09:05.909 [http-nio-9090-exec-5] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:09:13.044 [http-nio-9090-exec-6] INFO  c.b.a.l.controller.AuthController - a12f16d803df49a9b4afa15148b152a5  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@74079502
+11:09:13.045 [http-nio-9090-exec-6] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:09:35.512 [http-nio-9090-exec-7] INFO  c.b.a.l.controller.AuthController - 5b8f17643f204d4b95c32a1d05382f10  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@298e4e75
+11:09:35.513 [http-nio-9090-exec-7] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:09:41.000 [http-nio-9090-exec-2] INFO  c.b.a.l.controller.AuthController - cffc73ca69074b7b8a83b8c23fc1e5fd  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@55ceb474
+11:09:41.002 [http-nio-9090-exec-2] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:09:45.697 [http-nio-9090-exec-10] INFO  c.b.a.l.controller.AuthController - c3a5fb9b44774511b47520dd47f913c3  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@7d03262e
+11:09:45.698 [http-nio-9090-exec-10] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:10:28.911 [http-nio-9090-exec-4] INFO  c.b.a.l.controller.AuthController - 1d5b8d2f14314fec9e0f630d60414e20  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@5ce0186c
+11:10:28.925 [http-nio-9090-exec-4] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:10:42.987 [http-nio-9090-exec-8] INFO  c.b.a.l.controller.AuthController - 90db72afe40a42ee9935e01d71694614  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@6659f526
+11:10:42.988 [http-nio-9090-exec-8] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:10:53.532 [http-nio-9090-exec-9] INFO  c.b.a.l.controller.AuthController - 70a04d1e62ea460992bcd076754ebddc  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@31c03bca
+11:10:59.462 [http-nio-9090-exec-10] INFO  c.b.a.l.controller.AuthController - ee4a6b5e28d24e7baca185a68f53f2c7  AuthController: Login Method Called...Username: jude
+11:10:59.462 [http-nio-9090-exec-10] INFO  c.b.a.l.service.AuthService - ee4a6b5e28d24e7baca185a68f53f2c7  AuthService: findByUsername Method Called...Username: jude
+11:11:01.113 [http-nio-9090-exec-3] INFO  c.b.a.l.controller.AuthController - cfd0724264364442969926b6a2d8f5d8  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@1fc4ec2c
+11:11:01.114 [http-nio-9090-exec-3] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:11:02.126 [http-nio-9090-exec-6] INFO  c.b.a.l.controller.AuthController - 6eef8c8d9d694eda9af557119cf3be06  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@ac91b48
+11:11:02.127 [http-nio-9090-exec-6] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:11:31.010 [http-nio-9090-exec-9] INFO  c.b.a.l.controller.AuthController - 8cda91a18ac14049aa59460d34f2b37b  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@4382276
+11:11:31.011 [http-nio-9090-exec-9] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:11:31.608 [http-nio-9090-exec-1] INFO  c.b.a.l.controller.AuthController - c57507d398ca4446ab9de13e8faba43c  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@62dd3545
+11:11:31.610 [http-nio-9090-exec-1] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:16:09.995 [http-nio-9090-exec-7] INFO  c.b.a.l.controller.AuthController - 50325ec9b7a4413189d860864dd72a24  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@56aa09cd
+11:16:09.995 [http-nio-9090-exec-7] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:16:20.705 [http-nio-9090-exec-2] INFO  c.b.a.l.controller.AuthController - b53a78b0fba946579e53adf974ea8e1c  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@2ecc864c
+11:16:20.706 [http-nio-9090-exec-2] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:16:21.606 [http-nio-9090-exec-1] INFO  c.b.a.l.controller.AuthController - f96c82c2feb54f71ab4f2748ef5a5cb0  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@5c05e029
+11:16:21.607 [http-nio-9090-exec-1] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:16:24.448 [http-nio-9090-exec-5] INFO  c.b.a.l.controller.AuthController - 4a77c63736134f3ea61dc3d4d7ba8bde  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@70c4edc9
+11:16:24.449 [http-nio-9090-exec-5] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:16:55.931 [http-nio-9090-exec-8] INFO  c.b.a.l.controller.AuthController - a8839cf4c37e43a29fba0da47df5cd0a  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@490ffed9
+11:16:55.932 [http-nio-9090-exec-8] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:17:00.878 [http-nio-9090-exec-7] INFO  c.b.a.l.controller.AuthController - 282af92fd02c48d9b7c09689d57c315a  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@76d88c12
+11:17:00.878 [http-nio-9090-exec-7] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:17:03.664 [http-nio-9090-exec-1] INFO  c.b.a.l.controller.AuthController - 6193a7cf28b941309dc1616b41cd48e7  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@7384479e
+11:17:03.664 [http-nio-9090-exec-1] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:17:04.370 [http-nio-9090-exec-3] INFO  c.b.a.l.controller.AuthController - 46beab371b084a8a9ed32b20e039d2ad  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@161604c8
+11:17:04.371 [http-nio-9090-exec-3] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:17:14.795 [http-nio-9090-exec-6] INFO  c.b.a.l.controller.AuthController - 169befc85bdd4378b5544667a7f141ff  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@6a606be
+11:17:14.796 [http-nio-9090-exec-6] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:20:28.794 [http-nio-9090-exec-10] INFO  c.b.a.l.controller.AuthController - b46aa217e31e4561bf17da6db97f8a86  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@34665a64
+11:20:28.794 [http-nio-9090-exec-10] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:21:34.295 [http-nio-9090-exec-4] INFO  c.b.a.l.controller.AuthController - 286ab5e44ed9467794a2f97c681c14d7  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@224a22c2
+11:21:34.295 [http-nio-9090-exec-4] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:21:43.285 [http-nio-9090-exec-9] INFO  c.b.a.l.controller.AuthController - 27adc0b223c54dd2b44308f81b85acd1  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@258fa46e
+11:21:43.288 [http-nio-9090-exec-9] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:21:44.526 [http-nio-9090-exec-2] INFO  c.b.a.l.controller.AuthController - 7df1b75b72104be3b68236f8e3be275f  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@c38e5af
+11:21:44.527 [http-nio-9090-exec-2] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:21:47.931 [http-nio-9090-exec-10] INFO  c.b.a.l.controller.AuthController - 427b1a110ec9496394bb87ca17459465  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@40de530b
+11:21:47.931 [http-nio-9090-exec-10] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:22:36.165 [http-nio-9090-exec-4] INFO  c.b.a.l.controller.AuthController - 28859c4fb3df4643b2e0a8f3d010a858  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@5543ef8a
+11:22:36.165 [http-nio-9090-exec-4] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:22:59.768 [http-nio-9090-exec-9] INFO  c.b.a.l.controller.AuthController - f9dfff859c05426692931916109922bb  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@7ec5fb1d
+11:22:59.769 [http-nio-9090-exec-9] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:23:00.905 [http-nio-9090-exec-2] INFO  c.b.a.l.controller.AuthController - 6f555f5f24c74adfa5a5622938ae3d79  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@2ff81da9
+11:23:00.906 [http-nio-9090-exec-2] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:23:01.890 [http-nio-9090-exec-10] INFO  c.b.a.l.controller.AuthController - de07bbb785d6425db5d8a513fec33ae8  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@502d1ad2
+11:23:01.891 [http-nio-9090-exec-10] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:23:25.777 [http-nio-9090-exec-4] INFO  c.b.a.l.controller.AuthController - 21467d2c33ab4169b526d087e870f515  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@55ccd079
+11:23:25.778 [http-nio-9090-exec-4] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:23:27.088 [http-nio-9090-exec-6] INFO  c.b.a.l.controller.AuthController - 7779bef62ba14e7e80c310103d7a2c8c  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@20006da8
+11:23:27.088 [http-nio-9090-exec-6] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:23:27.678 [http-nio-9090-exec-7] INFO  c.b.a.l.controller.AuthController - 99efc014ceab4500bf63b2e1f05d8f48  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@39c91b1f
+11:23:27.679 [http-nio-9090-exec-7] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:34:17.928 [http-nio-9090-exec-5] INFO  c.b.a.l.controller.AuthController - 6b5622d3cf5241a69d5c68938a9a6824  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@2792a8c1
+11:34:27.655 [http-nio-9090-exec-8] INFO  c.b.a.l.controller.AuthController - a154507315ea4e12ad41118bb7e59c64  AuthController: Login Method Called...Username: jude
+11:34:27.655 [http-nio-9090-exec-8] INFO  c.b.a.l.service.AuthService - a154507315ea4e12ad41118bb7e59c64  AuthService: findByUsername Method Called...Username: jude
+11:34:29.247 [http-nio-9090-exec-9] INFO  c.b.a.l.controller.AuthController - e1e5e34197c14b50a408501157637c44  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@329b6d6
+11:34:29.248 [http-nio-9090-exec-9] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:34:31.151 [http-nio-9090-exec-1] INFO  c.b.a.l.controller.AuthController - c0fef7a8d156432d947703467b0172b9  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@780c8fad
+11:34:31.152 [http-nio-9090-exec-1] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:34:31.742 [http-nio-9090-exec-10] INFO  c.b.a.l.controller.AuthController - 2021867cc5154cc488c6cb7c8638bd5e  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@2caf1bc3
+11:34:31.743 [http-nio-9090-exec-10] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:35:19.191 [http-nio-9090-exec-4] INFO  c.b.a.l.controller.AuthController - 1c3f143506b74d5592e72cbd15951e72  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@70f47970
+11:35:19.191 [http-nio-9090-exec-4] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:35:20.908 [http-nio-9090-exec-6] INFO  c.b.a.l.controller.AuthController - 5cf585f1baee40d282d0d58ccb0ec575  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@caaf5c4
+11:35:20.908 [http-nio-9090-exec-6] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:35:21.624 [http-nio-9090-exec-7] INFO  c.b.a.l.controller.AuthController - 1a2f010bb490400c804646b96d164493  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@1a88be6a
+11:35:21.624 [http-nio-9090-exec-7] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:35:51.381 [http-nio-9090-exec-10] INFO  c.b.a.l.controller.AuthController - 97c8f11fc3274e8c9a28299fd3f979fb  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@612511cb
+11:35:51.381 [http-nio-9090-exec-10] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:35:52.574 [http-nio-9090-exec-5] INFO  c.b.a.l.controller.AuthController - 6471187e4458419b80191a37ad371002  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@49e694ea
+11:35:52.574 [http-nio-9090-exec-5] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:35:53.239 [http-nio-9090-exec-8] INFO  c.b.a.l.controller.AuthController - 871fa13e3125457880ee9dd9829be123  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@46258316
+11:35:53.239 [http-nio-9090-exec-8] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:37:41.960 [http-nio-9090-exec-2] INFO  c.b.a.l.controller.AuthController - ec6b8c8d6d364ab08bd3755dda2580b8  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@3476b149
+11:37:41.961 [http-nio-9090-exec-2] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:38:05.969 [http-nio-9090-exec-3] INFO  c.b.a.l.controller.AuthController - 26d0d0f7242e4e0398b905a57bbe5077  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@587f5cd0
+11:38:05.969 [http-nio-9090-exec-3] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:38:48.054 [http-nio-9090-exec-4] INFO  c.b.a.l.controller.AuthController - 3ca6870869484e9d87d62140cff45794  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@4566c2a7
+11:38:48.054 [http-nio-9090-exec-4] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:39:15.111 [http-nio-9090-exec-6] INFO  c.b.a.l.controller.AuthController - abed85fc9f054ef7bc8216330d6db08a  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@6c56faf9
+11:39:15.112 [http-nio-9090-exec-6] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:41:07.007 [http-nio-9090-exec-1] INFO  c.b.a.l.controller.AuthController - 9da4a07b4e764ffd9ce866a64cc21281  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@4ae6205a
+11:41:07.007 [http-nio-9090-exec-1] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:41:08.890 [http-nio-9090-exec-10] INFO  c.b.a.l.controller.AuthController - 44aa6a45a43848d684355526e6ea1024  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@347e6cba
+11:41:08.890 [http-nio-9090-exec-10] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:41:09.781 [http-nio-9090-exec-5] INFO  c.b.a.l.controller.AuthController - 22a47191bf144433b7199c838783d794  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@7bb3d886
+11:41:09.781 [http-nio-9090-exec-5] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:41:12.934 [http-nio-9090-exec-6] INFO  c.b.a.l.controller.AuthController - a31c75348dc945859202bff3c9cce98d  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@d567ef9
+11:41:12.934 [http-nio-9090-exec-6] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:41:14.941 [http-nio-9090-exec-7] INFO  c.b.a.l.controller.AuthController - 4375bc46f6964c4598f276d315daa26e  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@357755ae
+11:41:14.942 [http-nio-9090-exec-7] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:43:11.946 [http-nio-9090-exec-4] INFO  c.b.a.l.controller.AuthController - d2ac597f670a41fba78ab181b8cf14ca  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@7c05b60c
+11:43:11.947 [http-nio-9090-exec-4] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:43:15.356 [http-nio-9090-exec-9] INFO  c.b.a.l.controller.AuthController - c1697e7e5c964617bae643701ae5419a  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@5217e575
+11:43:15.357 [http-nio-9090-exec-9] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:43:15.995 [http-nio-9090-exec-7] INFO  c.b.a.l.controller.AuthController - 6109230caf7d4df39692970944dcdc0d  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@668b74f
+11:43:15.996 [http-nio-9090-exec-7] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:43:35.840 [http-nio-9090-exec-3] INFO  c.b.a.l.controller.AuthController - 5baa69f5af91438e8d03494793695ad8  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@2b19f795
+11:43:35.840 [http-nio-9090-exec-3] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:43:38.001 [http-nio-9090-exec-5] INFO  c.b.a.l.controller.AuthController - 44befd00677a4aa1b4af9944bae24670  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@3162bc46
+11:43:38.001 [http-nio-9090-exec-5] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:43:38.779 [http-nio-9090-exec-8] INFO  c.b.a.l.controller.AuthController - 1de3e2f31b5f43ffa85540c6ce1eef5a  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@5d45eff1
+11:43:38.779 [http-nio-9090-exec-8] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:45:32.846 [http-nio-9090-exec-2] INFO  c.b.a.l.controller.AuthController - cd25b04695f047b5bbaf45bc8d5046a4  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@33cd162b
+11:45:32.846 [http-nio-9090-exec-2] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:47:02.094 [http-nio-9090-exec-5] INFO  c.b.a.l.controller.AuthController - 33b9add8d04c45fd850b47208ad0f4a2  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@12dc8430
+11:47:02.094 [http-nio-9090-exec-5] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:47:13.070 [http-nio-9090-exec-8] INFO  c.b.a.l.controller.AuthController - f5a4e75a88d040e1898a9b699e3f6e0c  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@23cc7ecd
+11:47:13.070 [http-nio-9090-exec-8] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:47:27.847 [http-nio-9090-exec-6] INFO  c.b.a.l.controller.AuthController - 405908ac5936461baa69fe10cdbb60f8  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@6f14d2c7
+11:47:27.847 [http-nio-9090-exec-6] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:47:51.953 [http-nio-9090-exec-1] INFO  c.b.a.l.controller.AuthController - a4b8f1df9e3d4f6e8cc029b17b939318  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@52616c0d
+11:47:51.953 [http-nio-9090-exec-1] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:48:27.044 [http-nio-9090-exec-3] INFO  c.b.a.l.controller.AuthController - c1d483e17cb44dd2b124785183c51fe4  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@44a15a97
+11:48:27.044 [http-nio-9090-exec-3] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:48:34.999 [http-nio-9090-exec-5] INFO  c.b.a.l.controller.AuthController - 6966f5b4361846e895f8f7d10cced87f  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@c6773eb
+11:48:34.999 [http-nio-9090-exec-5] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:48:38.053 [http-nio-9090-exec-8] INFO  c.b.a.l.controller.AuthController - d10b9544158c4ded8e6c4c92515c3489  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@5a156fe5
+11:48:38.055 [http-nio-9090-exec-8] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:48:39.950 [http-nio-9090-exec-6] INFO  c.b.a.l.controller.AuthController - a520e0bb6c6c4c6fa7733beceb452c9c  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@936c00e
+11:48:39.951 [http-nio-9090-exec-6] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:50:21.222 [http-nio-9090-exec-4] INFO  c.b.a.l.controller.AuthController - f7f59c4a278445949ecb98bfe2ea53c0  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@1a902a4d
+11:50:21.222 [http-nio-9090-exec-4] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:50:23.097 [http-nio-9090-exec-8] INFO  c.b.a.l.controller.AuthController - a9f54f8db9d044f99c94d4d7cc2ed6ae  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@596f885a
+11:50:23.097 [http-nio-9090-exec-8] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:50:26.954 [http-nio-9090-exec-1] INFO  c.b.a.l.controller.AuthController - b74bb50f718c4889b58289a4ae819571  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@1bab55b1
+11:50:26.954 [http-nio-9090-exec-1] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:50:28.087 [http-nio-9090-exec-2] INFO  c.b.a.l.controller.AuthController - a088d87bb133481d9eea50285088d57f  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@3edd1676
+11:50:28.088 [http-nio-9090-exec-2] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:50:36.292 [http-nio-9090-exec-9] INFO  c.b.a.l.controller.AuthController - 55b4873020d747a0b0cb2b23d0b71834  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@3aa7a329
+11:50:36.293 [http-nio-9090-exec-9] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:50:59.256 [http-nio-9090-exec-10] INFO  c.b.a.l.controller.AuthController - 92a30047cc114f1cb18d7871d60413e0  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@4b4ee0bc
+11:50:59.256 [http-nio-9090-exec-10] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:51:37.865 [http-nio-9090-exec-6] INFO  c.b.a.l.controller.AuthController - 52889a6eddce433caed21721800aba52  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@3363b440
+11:51:37.865 [http-nio-9090-exec-6] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:52:01.906 [http-nio-9090-exec-7] INFO  c.b.a.l.controller.AuthController - 3293ab4074454a14a7f9fb22d0c919ec  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@4d20191f
+11:52:01.906 [http-nio-9090-exec-7] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:52:38.874 [http-nio-9090-exec-3] INFO  c.b.a.l.controller.AuthController - 14c30268343a42e09979ff39fd45e15f  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@70f312c7
+11:52:38.874 [http-nio-9090-exec-3] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:54:28.128 [http-nio-9090-exec-4] INFO  c.b.a.l.controller.AuthController - c6abb96791454d1b96f6aacb023dcef7  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@6e331557
+11:54:46.682 [http-nio-9090-exec-9] INFO  c.b.a.l.controller.AuthController - 16e09ba27cf74be7904e8b3ed94d5dab  AuthController: Login Method Called...Username: jude
+11:54:46.683 [http-nio-9090-exec-9] INFO  c.b.a.l.service.AuthService - 16e09ba27cf74be7904e8b3ed94d5dab  AuthService: findByUsername Method Called...Username: jude
+11:54:48.272 [http-nio-9090-exec-1] INFO  c.b.a.l.controller.AuthController - b184cbc706ab4863b88cd98840dfed65  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@3cf43039
+11:54:48.272 [http-nio-9090-exec-1] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:54:50.991 [http-nio-9090-exec-3] INFO  c.b.a.l.controller.AuthController - 8999f0bdd50b4ca988eb1f7a0aaf7c7c  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@772c2f6b
+11:54:50.991 [http-nio-9090-exec-3] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:54:51.890 [http-nio-9090-exec-10] INFO  c.b.a.l.controller.AuthController - 77edc763db844bbdb7b3dc07edcc5ce1  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@72eed4a1
+11:54:51.891 [http-nio-9090-exec-10] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:54:53.189 [http-nio-9090-exec-5] INFO  c.b.a.l.controller.AuthController - a460c0fff9cb402dbd8faf90fa6e10e9  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@2e78d1ae
+11:54:53.190 [http-nio-9090-exec-5] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:55:15.247 [http-nio-9090-exec-1] INFO  c.b.a.l.controller.AuthController - 8e0bcb9c5b8c4e2e95a115666593174a  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@8602543
+11:55:15.248 [http-nio-9090-exec-1] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:55:16.474 [http-nio-9090-exec-3] INFO  c.b.a.l.controller.AuthController - be2c9935317843b58fff7b1c0bc3c51d  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@b9f3bae
+11:55:16.474 [http-nio-9090-exec-3] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:55:17.998 [http-nio-9090-exec-10] INFO  c.b.a.l.controller.AuthController - 5e4367805a444be18692f05d0e71560a  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@24893ce6
+11:55:17.998 [http-nio-9090-exec-10] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:55:18.543 [http-nio-9090-exec-5] INFO  c.b.a.l.controller.AuthController - 9d0ded6655a44aab8139775908337f5d  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@1c101b27
+11:55:18.544 [http-nio-9090-exec-5] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:55:46.845 [http-nio-9090-exec-1] INFO  c.b.a.l.controller.AuthController - 276e5e701a8d4a55af8538a485aff3b5  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@218e1682
+11:55:46.845 [http-nio-9090-exec-1] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:55:49.376 [http-nio-9090-exec-3] INFO  c.b.a.l.controller.AuthController - 9ee2ef2501444e198c92eac7c111c58c  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@4965b31d
+11:55:49.377 [http-nio-9090-exec-3] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:55:50.228 [http-nio-9090-exec-10] INFO  c.b.a.l.controller.AuthController - 9c344a0ddb89440cbd76287923f11f2d  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@2b153962
+11:55:50.229 [http-nio-9090-exec-10] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:55:50.830 [http-nio-9090-exec-5] INFO  c.b.a.l.controller.AuthController - 4a14a74e19b544caa09a792a45cbc453  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@23c75ea2
+11:55:50.831 [http-nio-9090-exec-5] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:56:02.775 [http-nio-9090-exec-3] INFO  c.b.a.l.controller.AuthController - 8ce7e00a34c84101ac651fba53b7beda  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@4d0f2d55
+11:56:02.775 [http-nio-9090-exec-3] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:56:33.610 [http-nio-9090-exec-9] INFO  c.b.a.l.controller.AuthController - 131e8ff7a3bb40ad817d3f41c06443a1  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@5a38c049
+11:56:33.610 [http-nio-9090-exec-9] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:56:39.917 [http-nio-9090-exec-5] INFO  c.b.a.l.controller.AuthController - da417736201b460d9661de4c4797a2fa  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@272dffdf
+11:56:39.918 [http-nio-9090-exec-5] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:56:44.815 [http-nio-9090-exec-7] INFO  c.b.a.l.controller.AuthController - 0f33533237934f8ebf0e613112b988b8  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@5593c138
+11:56:44.816 [http-nio-9090-exec-7] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:56:49.439 [http-nio-9090-exec-6] INFO  c.b.a.l.controller.AuthController - 029b18afa9424041a7af5b5519c57e78  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@7b1c6d02
+11:56:49.439 [http-nio-9090-exec-6] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
+11:57:15.876 [http-nio-9090-exec-5] INFO  c.b.a.l.controller.AuthController - e2e89871c763446da700dcbd4e01ae9f  AuthController: verifyUser Method Called...Token: com.bv.assignment.leave_request_api.models.GetToken@71644ad6
+11:57:15.876 [http-nio-9090-exec-5] INFO  c.b.a.l.service.AuthService - 1123 AuthService: findByUsername Method Called...Username: jude
